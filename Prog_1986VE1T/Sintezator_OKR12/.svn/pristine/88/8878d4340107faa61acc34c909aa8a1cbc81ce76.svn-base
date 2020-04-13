@@ -1,0 +1,16 @@
+
+#include "opora.h"
+
+typedef struct                //flags
+{
+  uint32_t*     data;  //ножки данных и адреса
+  unsigned int*       adr;  //выбор между адресом регистров и данными регистров
+  unsigned int*   wrn_DDS;  //сигнал записи
+  unsigned int*   rdn_DDS;  //сигнал чтения
+  unsigned int*   csn_DDS;  //сигнал выбора микросхемы
+  unsigned int*  SCSN_DDS;  //сигнал выбора параллельного интерфейса 
+   
+} Init_pins_for_DDS;
+
+
+ //Init_pins_for_DDS   pins_DDS;  // объявляю структуру 

@@ -1,0 +1,271 @@
+-- Copyright (C) 1988-2002 Altera Corporation
+-- Any megafunction design, and related net list (encrypted or decrypted),
+-- support information, device programming or simulation file, and any other
+-- associated documentation or information provided by Altera or a partner
+-- under Altera's Megafunction Partnership Program may be used only to
+-- program PLD devices (but not masked PLD devices) from Altera.  Any other
+-- use of such megafunction design, net list, support information, device
+-- programming or simulation file, or any other related documentation or
+-- information is prohibited for any other purpose, including, but not
+-- limited to modification, reverse engineering, de-compiling, or use with
+-- any other silicon devices, unless such use is explicitly licensed under
+-- a separate agreement with Altera or a megafunction partner.  Title to
+-- the intellectual property, including patents, copyrights, trademarks,
+-- trade secrets, or maskworks, embodied in any such megafunction design,
+-- net list, support information, device programming or simulation file, or
+-- any other related documentation or information provided by Altera or a
+-- megafunction partner, remains with Altera, the megafunction partner, or
+-- their respective licensors.  No other licenses, including any licenses
+-- needed under any third party's intellectual property, are provided herein.
+
+
+
+N.C. = No Connect. This pin has no internal connection to the device.
+VCCINT = Dedicated power pin, which MUST be connected to VCC (2.5 volts).
+VCCIO = Dedicated power pin, which MUST be connected to VCC (2.5 volts).
+GND = Dedicated ground pin or unused dedicated input, which MUST be connected to GND.
+RESERVED = Unused I/O pin, which MUST be left unconnected.
+
+----------------------------------------------------------------------------
+
+CHIP "sinhron_tst" ASSIGNED TO AN EPF10K200SRC240-1X
+TCK                              : 1
+CONF_DONE                        : 2
+nCEO                             : 3
+TDO                              : 4
+VCCINT                           : 5
+OUT_TKP                          : 6
+OUT_rezerv                       : 7
+RESERVED                         : 8
+adr7_fpga                        : 9
+GND                              : 10
+adr6_fpga                        : 11
+mk_rzv1                          : 12
+adr5_fpga                        : 13
+adr4_fpga                        : 14
+mk_rzv2                          : 15
+VCCIO                            : 16
+adr3_fpga                        : 17
+adr2_fpga                        : 18
+adr1_fpga                        : 19
+VCCINT                           : 20
+adr0_fpga                        : 21
+GND                              : 22
+int4_fpga                        : 23
+int3_fpga                        : 24
+int2_fpga                        : 25
+int1_fpga                        : 26
+VCCINT                           : 27
+data7_fpga_mk2                   : 28
+data6_fpga_mk2                   : 29
+data5_fpga_mk2                   : 30
+data4_fpga_mk2                   : 31
+GND                              : 32
+data3_fpga_mk2                   : 33
+data2_fpga_mk2                   : 34
+data1_fpga_mk2                   : 35
+data0_fpga_mk2                   : 36
+VCCIO                            : 37
+led8                             : 38
+led7                             : 39
+VCCINT                           : 40
+led6                             : 41
+GND                              : 42
+led5                             : 43
+led4                             : 44
+led3                             : 45
+led2                             : 46
+VCCINT                           : 47
+led1                             : 48
+BUS_ADR7                         : 49
+BUS_ADR6                         : 50
+BUS_ADR5                         : 51
+GND                              : 52
+BUS_ADR4                         : 53
+BUS_ADR3                         : 54
+BUS_ADR2                         : 55
+BUS_ADR1                         : 56
+VCCIO                            : 57
+TMS                              : 58
+nTRST                            : 59
+nSTATUS                          : 60
+dataF_fpga                       : 61
+BUS_ADR0                         : 62
+dataD_fpga                       : 63
+dataE_fpga                       : 64
+dataB_fpga                       : 65
+dataC_fpga                       : 66
+data9_fpga                       : 67
+dataA_fpga                       : 68
+GND                              : 69
+data7_fpga                       : 70
+data8_fpga                       : 71
+data5_fpga                       : 72
+data6_fpga                       : 73
+data3_fpga                       : 74
+data4_fpga                       : 75
+VCCINT                           : 76
+VCCIO                            : 77
+data2_fpga                       : 78
+data1_fpga                       : 79
+RESERVED                         : 80
+data0_fpga                       : 81
+RESERVED                         : 82
+RESERVED                         : 83
+RESERVED                         : 84
+GND                              : 85
+RESERVED                         : 86
+RESERVED                         : 87
+RESERVED                         : 88
+VCC_CKLK                         : 89
+rezerv8_fpga                     : 90
+inp1                             : 91
+wr_fpga                          : 92
+GND_CKLK                         : 93
+RESERVED                         : 94
+RESERVED                         : 95
+VCCINT                           : 96
+RESERVED                         : 97
+RESERVED                         : 98
+RESERVED                         : 99
+RESERVED                         : 100
+RESERVED                         : 101
+RESERVED                         : 102
+rezerv9_fpga                     : 103
+GND                              : 104
+RESERVED                         : 105
+rezerv6_fpga                     : 106
+rezerv7_fpga                     : 107
+rezerv4_fpga                     : 108
+rezerv5_fpga                     : 109
+RESERVED                         : 110
+RESERVED                         : 111
+VCCIO                            : 112
+RESERVED                         : 113
+RESERVED                         : 114
+RESERVED                         : 115
+RE_485_plis                      : 116
+RESERVED                         : 117
+RESERVED                         : 118
+DE_485                           : 119
+RESERVED                         : 120
+nCONFIG                          : 121
+VCCINT                           : 122
+MSEL1                            : 123
+MSEL0                            : 124
+GND                              : 125
+RESERVED                         : 126
+TXD_485                          : 127
+TXD1_BUF                         : 128
+RESERVED                         : 129
+VCCINT                           : 130
+RXD1_232_PLIS                    : 131
+RXD_485                          : 132
+RXD2_PLIS                        : 133
+TXD2_PLIS                        : 134
+GND                              : 135
+RESERVED                         : 136
+RXD1_PLIS                        : 137
+TXD1_PLIS                        : 138
+VCCINT                           : 139
+VCCIO                            : 140
+RESERVED                         : 141
+TXD2_FTDI                        : 142
+RXD2_FTDI                        : 143
+RESERVED                         : 144
+GND                              : 145
+TXD1_FTDI                        : 146
+RXD1_FTDI                        : 147
+bus_dtaF                         : 148
+bus_dtaE                         : 149
+VCCINT                           : 150
+bus_dtaD                         : 151
+bus_dtaC                         : 152
+bus_dtaB                         : 153
+bus_dtaA                         : 154
+GND                              : 155
+bus_dta9                         : 156
+bus_dta8                         : 157
+bus_dta7                         : 158
+VCCINT                           : 159
+VCCIO                            : 160
+bus_dta6                         : 161
+bus_dta5                         : 162
+mk_rzv4                          : 163
+bus_dta4                         : 164
+GND                              : 165
+bus_dta3                         : 166
+bus_dta2                         : 167
+bus_dta1                         : 168
+bus_dta0                         : 169
+VCCINT                           : 170
+RESERVED                         : 171
+DE_485_plis                      : 172
+RESERVED                         : 173
+RESERVED                         : 174
+RESERVED                         : 175
+GND                              : 176
+TDI                              : 177
+nCE                              : 178
+DCLK                             : 179
+DATA0                            : 180
+RESERVED                         : 181
+RESERVED                         : 182
+RESERVED                         : 183
+RESERVED                         : 184
+fpga_int_TNO                     : 185
+fpga_int_TNC                     : 186
+VCCINT                           : 187
+fpga_int_TOBM                    : 188
+VCCIO                            : 189
+fpga_int_TKI                     : 190
+fpga_int_TNI                     : 191
+fpga_int_TKP                     : 192
+fpga_int_TNP                     : 193
+bus_data0                        : 194
+bus_data2                        : 195
+bus_data1                        : 196
+GND                              : 197
+bus_data4                        : 198
+bus_data3                        : 199
+bus_data6                        : 200
+bus_data5                        : 201
+bus_data7                        : 202
+bus_data8                        : 203
+bus_data9                        : 204
+VCCIO                            : 205
+bus_dataA                        : 206
+bus_dataB                        : 207
+bus_dataC                        : 208
+bus_dataD                        : 209
+rd_fpga                          : 210
+f5mhz                            : 211
+mk_rzv3                          : 212
+bus_dataE                        : 213
+bus_dataF                        : 214
+BUS_TNO                          : 215
+GND                              : 216
+BUS_TNC                          : 217
+BUS_TOBM                         : 218
+BUS_TNI                          : 219
+BUS_TKI                          : 220
+BUS_TNP                          : 221
+BUS_TKP                          : 222
+BUS_rezerv                       : 223
+VCCIO                            : 224
+VCCINT                           : 225
+BUS_WE                           : 226
+BUS_CLK                          : 227
+BUS_ALE1                         : 228
+BUS_RD                           : 229
+BUS_ALE2                         : 230
+BUS_ALE4                         : 231
+GND                              : 232
+BUS_ALE3                         : 233
+OUT_TNO                          : 234
+BUS_rezerv2                      : 235
+OUT_TOBM                         : 236
+OUT_TNC                          : 237
+OUT_TKI                          : 238
+OUT_TNI                          : 239
+OUT_TNP                          : 240

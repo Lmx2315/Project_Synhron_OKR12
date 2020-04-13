@@ -1,0 +1,515 @@
+Dependencies for Project 'UDPCANUART', Target 'Управляющая программа': (DO NOT MODIFY !)
+F (.\src\Application.c)(0x5497B18D)(-c --cpu Cortex-M1 -g -O0 --apcs=interwork -I.\inc -I.\src\TCPIP\ARP -I.\src\TCPIP\MAC -I.\src\TCPIP\ICMP -I.\src\TCPIP\IP -I.\src\TCPIP\UDP -I.\src\1986VE1T\CAN1 -I.\src\1986VE1T\ETHERNET -I.\src\1986VE1T\PORTA -I.\src\1986VE1T\PORTB -I.\src\1986VE1T\PORTC -I.\src\1986VE1T\PORTD -I.\src\1986VE1T\PORTE -I.\src\1986VE1T\PORTF -I.\src\1986VE1T\RST_CLK -I.\src -I.\src\API\MemAPI-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I Libraries\CMSIS\CM1\DeviceSupport\MDR1986VE1T\inc-o .\obj\application.o --omf_browse .\obj\application.crf --depend .\obj\application.d)
+I (src\Application.h)(0x5492A2D0)
+I (.\inc\opora.h)(0x4EBA2D5A)
+I (.\inc\core_cm1.h)(0x4E520E64)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FE0ABE)
+I (.\inc\opora_can_defs.h)(0x4C7F86AC)
+I (.\inc\opora_usb_defs.h)(0x4C7F86AC)
+I (.\inc\opora_eeprom_defs.h)(0x4C7F86AC)
+I (.\inc\opora_rst_clk_defs.h)(0x4D47F8C2)
+I (.\inc\opora_dma_defs.h)(0x4C7F86AC)
+I (.\inc\opora_uart_defs.h)(0x4C7F86AC)
+I (.\inc\opora_spi_defs.h)(0x4C7F86AC)
+I (.\inc\opora_mil_std_1553_defs.h)(0x4C7F86AC)
+I (.\inc\opora_power_defs.h)(0x4C7F86AC)
+I (.\inc\opora_wwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_iwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_timer_defs.h)(0x4C7F86AC)
+I (.\inc\opora_adc_defs.h)(0x4C7F86AC)
+I (.\inc\opora_dac_defs.h)(0x4C7F86AC)
+I (.\inc\opora_port_defs.h)(0x4EA9381C)
+I (.\inc\opora_arinc429r_defs.h)(0x4FD9F84C)
+I (.\inc\opora_bkp_defs.h)(0x4C7F86AC)
+I (.\inc\opora_arinc429t_defs.h)(0x4FD9F86A)
+I (.\inc\opora_ext_bus_cntrl_defs.h)(0x4FEAEE36)
+I (.\inc\opora_ethernet_defs.h)(0x4EC51564)
+I (.\inc\opora_sys_defs.h)(0x4C7F86AC)
+I (.\src\TCPIP\IP\IP.h)(0x54911233)
+I (.\src\TCPIP\UDP\UDP.h)(0x5497A963)
+I (.\src\1986VE1T\CAN1\CAN1.h)(0x5491068A)
+I (.\src\1986VE1T\RST_CLK\RST_CLK.h)(0x549106AF)
+I (.\src\1986VE1T\ETHERNET\ETHERNET.h)(0x549262A3)
+I (.\inc\config.h)(0x5492628A)
+I (.\src\1986VE1T\PORTA\PORTA.h)(0x5491074C)
+I (.\src\1986VE1T\PORTB\PORTB.h)(0x5491074C)
+I (.\src\1986VE1T\PORTC\PORTC.h)(0x5491074B)
+I (.\src\1986VE1T\PORTD\PORTD.h)(0x5491074B)
+I (.\src\1986VE1T\PORTE\PORTE.h)(0x5491074B)
+I (.\src\1986VE1T\PORTF\PORTF.h)(0x5491074B)
+I (.\src\TCPIP\MAC\MAC.h)(0x549168A7)
+I (.\src\TCPIP\ARP\ARP.h)(0x54917100)
+I (.\src\TCPIP\ICMP\ICMP.h)(0x54911233)
+F (.\src\Startup.s)(0x54895F6B)(--cpu Cortex-M1 -g --apcs=interwork -I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I Libraries\CMSIS\CM1\DeviceSupport\MDR1986VE1T\inc--list .\lst\startup.lst --xref -o .\obj\startup.o --depend .\obj\startup.d)
+F (.\src\1986VE1T\CAN1\CAN1.c)(0x5491083C)(-c --cpu Cortex-M1 -g -O0 --apcs=interwork -I.\inc -I.\src\TCPIP\ARP -I.\src\TCPIP\MAC -I.\src\TCPIP\ICMP -I.\src\TCPIP\IP -I.\src\TCPIP\UDP -I.\src\1986VE1T\CAN1 -I.\src\1986VE1T\ETHERNET -I.\src\1986VE1T\PORTA -I.\src\1986VE1T\PORTB -I.\src\1986VE1T\PORTC -I.\src\1986VE1T\PORTD -I.\src\1986VE1T\PORTE -I.\src\1986VE1T\PORTF -I.\src\1986VE1T\RST_CLK -I.\src -I.\src\API\MemAPI-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I Libraries\CMSIS\CM1\DeviceSupport\MDR1986VE1T\inc-o .\obj\can1.o --omf_browse .\obj\can1.crf --depend .\obj\can1.d)
+I (src\1986VE1T\CAN1\CAN1.h)(0x5491068A)
+I (.\inc\opora.h)(0x4EBA2D5A)
+I (.\inc\core_cm1.h)(0x4E520E64)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FE0ABE)
+I (.\inc\opora_can_defs.h)(0x4C7F86AC)
+I (.\inc\opora_usb_defs.h)(0x4C7F86AC)
+I (.\inc\opora_eeprom_defs.h)(0x4C7F86AC)
+I (.\inc\opora_rst_clk_defs.h)(0x4D47F8C2)
+I (.\inc\opora_dma_defs.h)(0x4C7F86AC)
+I (.\inc\opora_uart_defs.h)(0x4C7F86AC)
+I (.\inc\opora_spi_defs.h)(0x4C7F86AC)
+I (.\inc\opora_mil_std_1553_defs.h)(0x4C7F86AC)
+I (.\inc\opora_power_defs.h)(0x4C7F86AC)
+I (.\inc\opora_wwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_iwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_timer_defs.h)(0x4C7F86AC)
+I (.\inc\opora_adc_defs.h)(0x4C7F86AC)
+I (.\inc\opora_dac_defs.h)(0x4C7F86AC)
+I (.\inc\opora_port_defs.h)(0x4EA9381C)
+I (.\inc\opora_arinc429r_defs.h)(0x4FD9F84C)
+I (.\inc\opora_bkp_defs.h)(0x4C7F86AC)
+I (.\inc\opora_arinc429t_defs.h)(0x4FD9F86A)
+I (.\inc\opora_ext_bus_cntrl_defs.h)(0x4FEAEE36)
+I (.\inc\opora_ethernet_defs.h)(0x4EC51564)
+I (.\inc\opora_sys_defs.h)(0x4C7F86AC)
+I (.\inc\config.h)(0x5492628A)
+F (.\src\1986VE1T\PORTA\PORTA.c)(0x5491083C)(-c --cpu Cortex-M1 -g -O0 --apcs=interwork -I.\inc -I.\src\TCPIP\ARP -I.\src\TCPIP\MAC -I.\src\TCPIP\ICMP -I.\src\TCPIP\IP -I.\src\TCPIP\UDP -I.\src\1986VE1T\CAN1 -I.\src\1986VE1T\ETHERNET -I.\src\1986VE1T\PORTA -I.\src\1986VE1T\PORTB -I.\src\1986VE1T\PORTC -I.\src\1986VE1T\PORTD -I.\src\1986VE1T\PORTE -I.\src\1986VE1T\PORTF -I.\src\1986VE1T\RST_CLK -I.\src -I.\src\API\MemAPI-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I Libraries\CMSIS\CM1\DeviceSupport\MDR1986VE1T\inc-o .\obj\porta.o --omf_browse .\obj\porta.crf --depend .\obj\porta.d)
+I (.\inc\opora.h)(0x4EBA2D5A)
+I (.\inc\core_cm1.h)(0x4E520E64)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FE0ABE)
+I (.\inc\opora_can_defs.h)(0x4C7F86AC)
+I (.\inc\opora_usb_defs.h)(0x4C7F86AC)
+I (.\inc\opora_eeprom_defs.h)(0x4C7F86AC)
+I (.\inc\opora_rst_clk_defs.h)(0x4D47F8C2)
+I (.\inc\opora_dma_defs.h)(0x4C7F86AC)
+I (.\inc\opora_uart_defs.h)(0x4C7F86AC)
+I (.\inc\opora_spi_defs.h)(0x4C7F86AC)
+I (.\inc\opora_mil_std_1553_defs.h)(0x4C7F86AC)
+I (.\inc\opora_power_defs.h)(0x4C7F86AC)
+I (.\inc\opora_wwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_iwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_timer_defs.h)(0x4C7F86AC)
+I (.\inc\opora_adc_defs.h)(0x4C7F86AC)
+I (.\inc\opora_dac_defs.h)(0x4C7F86AC)
+I (.\inc\opora_port_defs.h)(0x4EA9381C)
+I (.\inc\opora_arinc429r_defs.h)(0x4FD9F84C)
+I (.\inc\opora_bkp_defs.h)(0x4C7F86AC)
+I (.\inc\opora_arinc429t_defs.h)(0x4FD9F86A)
+I (.\inc\opora_ext_bus_cntrl_defs.h)(0x4FEAEE36)
+I (.\inc\opora_ethernet_defs.h)(0x4EC51564)
+I (.\inc\opora_sys_defs.h)(0x4C7F86AC)
+I (src\1986VE1T\PORTA\PORTA.h)(0x5491074C)
+F (.\src\1986VE1T\PORTB\PORTB.c)(0x549260E9)(-c --cpu Cortex-M1 -g -O0 --apcs=interwork -I.\inc -I.\src\TCPIP\ARP -I.\src\TCPIP\MAC -I.\src\TCPIP\ICMP -I.\src\TCPIP\IP -I.\src\TCPIP\UDP -I.\src\1986VE1T\CAN1 -I.\src\1986VE1T\ETHERNET -I.\src\1986VE1T\PORTA -I.\src\1986VE1T\PORTB -I.\src\1986VE1T\PORTC -I.\src\1986VE1T\PORTD -I.\src\1986VE1T\PORTE -I.\src\1986VE1T\PORTF -I.\src\1986VE1T\RST_CLK -I.\src -I.\src\API\MemAPI-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I Libraries\CMSIS\CM1\DeviceSupport\MDR1986VE1T\inc-o .\obj\portb.o --omf_browse .\obj\portb.crf --depend .\obj\portb.d)
+I (.\inc\opora.h)(0x4EBA2D5A)
+I (.\inc\core_cm1.h)(0x4E520E64)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FE0ABE)
+I (.\inc\opora_can_defs.h)(0x4C7F86AC)
+I (.\inc\opora_usb_defs.h)(0x4C7F86AC)
+I (.\inc\opora_eeprom_defs.h)(0x4C7F86AC)
+I (.\inc\opora_rst_clk_defs.h)(0x4D47F8C2)
+I (.\inc\opora_dma_defs.h)(0x4C7F86AC)
+I (.\inc\opora_uart_defs.h)(0x4C7F86AC)
+I (.\inc\opora_spi_defs.h)(0x4C7F86AC)
+I (.\inc\opora_mil_std_1553_defs.h)(0x4C7F86AC)
+I (.\inc\opora_power_defs.h)(0x4C7F86AC)
+I (.\inc\opora_wwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_iwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_timer_defs.h)(0x4C7F86AC)
+I (.\inc\opora_adc_defs.h)(0x4C7F86AC)
+I (.\inc\opora_dac_defs.h)(0x4C7F86AC)
+I (.\inc\opora_port_defs.h)(0x4EA9381C)
+I (.\inc\opora_arinc429r_defs.h)(0x4FD9F84C)
+I (.\inc\opora_bkp_defs.h)(0x4C7F86AC)
+I (.\inc\opora_arinc429t_defs.h)(0x4FD9F86A)
+I (.\inc\opora_ext_bus_cntrl_defs.h)(0x4FEAEE36)
+I (.\inc\opora_ethernet_defs.h)(0x4EC51564)
+I (.\inc\opora_sys_defs.h)(0x4C7F86AC)
+I (src\1986VE1T\PORTB\PORTB.h)(0x5491074C)
+F (.\src\1986VE1T\ETHERNET\ETHERNET.c)(0x54926238)(-c --cpu Cortex-M1 -g -O0 --apcs=interwork -I.\inc -I.\src\TCPIP\ARP -I.\src\TCPIP\MAC -I.\src\TCPIP\ICMP -I.\src\TCPIP\IP -I.\src\TCPIP\UDP -I.\src\1986VE1T\CAN1 -I.\src\1986VE1T\ETHERNET -I.\src\1986VE1T\PORTA -I.\src\1986VE1T\PORTB -I.\src\1986VE1T\PORTC -I.\src\1986VE1T\PORTD -I.\src\1986VE1T\PORTE -I.\src\1986VE1T\PORTF -I.\src\1986VE1T\RST_CLK -I.\src -I.\src\API\MemAPI-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I Libraries\CMSIS\CM1\DeviceSupport\MDR1986VE1T\inc-o .\obj\ethernet.o --omf_browse .\obj\ethernet.crf --depend .\obj\ethernet.d)
+I (.\inc\opora.h)(0x4EBA2D5A)
+I (.\inc\core_cm1.h)(0x4E520E64)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FE0ABE)
+I (.\inc\opora_can_defs.h)(0x4C7F86AC)
+I (.\inc\opora_usb_defs.h)(0x4C7F86AC)
+I (.\inc\opora_eeprom_defs.h)(0x4C7F86AC)
+I (.\inc\opora_rst_clk_defs.h)(0x4D47F8C2)
+I (.\inc\opora_dma_defs.h)(0x4C7F86AC)
+I (.\inc\opora_uart_defs.h)(0x4C7F86AC)
+I (.\inc\opora_spi_defs.h)(0x4C7F86AC)
+I (.\inc\opora_mil_std_1553_defs.h)(0x4C7F86AC)
+I (.\inc\opora_power_defs.h)(0x4C7F86AC)
+I (.\inc\opora_wwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_iwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_timer_defs.h)(0x4C7F86AC)
+I (.\inc\opora_adc_defs.h)(0x4C7F86AC)
+I (.\inc\opora_dac_defs.h)(0x4C7F86AC)
+I (.\inc\opora_port_defs.h)(0x4EA9381C)
+I (.\inc\opora_arinc429r_defs.h)(0x4FD9F84C)
+I (.\inc\opora_bkp_defs.h)(0x4C7F86AC)
+I (.\inc\opora_arinc429t_defs.h)(0x4FD9F86A)
+I (.\inc\opora_ext_bus_cntrl_defs.h)(0x4FEAEE36)
+I (.\inc\opora_ethernet_defs.h)(0x4EC51564)
+I (.\inc\opora_sys_defs.h)(0x4C7F86AC)
+I (src\1986VE1T\ETHERNET\ETHERNET.h)(0x549262A3)
+I (.\inc\config.h)(0x5492628A)
+F (.\src\1986VE1T\PORTC\PORTC.c)(0x54910BF2)(-c --cpu Cortex-M1 -g -O0 --apcs=interwork -I.\inc -I.\src\TCPIP\ARP -I.\src\TCPIP\MAC -I.\src\TCPIP\ICMP -I.\src\TCPIP\IP -I.\src\TCPIP\UDP -I.\src\1986VE1T\CAN1 -I.\src\1986VE1T\ETHERNET -I.\src\1986VE1T\PORTA -I.\src\1986VE1T\PORTB -I.\src\1986VE1T\PORTC -I.\src\1986VE1T\PORTD -I.\src\1986VE1T\PORTE -I.\src\1986VE1T\PORTF -I.\src\1986VE1T\RST_CLK -I.\src -I.\src\API\MemAPI-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I Libraries\CMSIS\CM1\DeviceSupport\MDR1986VE1T\inc-o .\obj\portc.o --omf_browse .\obj\portc.crf --depend .\obj\portc.d)
+I (.\inc\opora.h)(0x4EBA2D5A)
+I (.\inc\core_cm1.h)(0x4E520E64)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FE0ABE)
+I (.\inc\opora_can_defs.h)(0x4C7F86AC)
+I (.\inc\opora_usb_defs.h)(0x4C7F86AC)
+I (.\inc\opora_eeprom_defs.h)(0x4C7F86AC)
+I (.\inc\opora_rst_clk_defs.h)(0x4D47F8C2)
+I (.\inc\opora_dma_defs.h)(0x4C7F86AC)
+I (.\inc\opora_uart_defs.h)(0x4C7F86AC)
+I (.\inc\opora_spi_defs.h)(0x4C7F86AC)
+I (.\inc\opora_mil_std_1553_defs.h)(0x4C7F86AC)
+I (.\inc\opora_power_defs.h)(0x4C7F86AC)
+I (.\inc\opora_wwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_iwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_timer_defs.h)(0x4C7F86AC)
+I (.\inc\opora_adc_defs.h)(0x4C7F86AC)
+I (.\inc\opora_dac_defs.h)(0x4C7F86AC)
+I (.\inc\opora_port_defs.h)(0x4EA9381C)
+I (.\inc\opora_arinc429r_defs.h)(0x4FD9F84C)
+I (.\inc\opora_bkp_defs.h)(0x4C7F86AC)
+I (.\inc\opora_arinc429t_defs.h)(0x4FD9F86A)
+I (.\inc\opora_ext_bus_cntrl_defs.h)(0x4FEAEE36)
+I (.\inc\opora_ethernet_defs.h)(0x4EC51564)
+I (.\inc\opora_sys_defs.h)(0x4C7F86AC)
+I (src\1986VE1T\PORTC\PORTC.h)(0x5491074B)
+F (.\src\1986VE1T\PORTD\PORTD.c)(0x54910BF2)(-c --cpu Cortex-M1 -g -O0 --apcs=interwork -I.\inc -I.\src\TCPIP\ARP -I.\src\TCPIP\MAC -I.\src\TCPIP\ICMP -I.\src\TCPIP\IP -I.\src\TCPIP\UDP -I.\src\1986VE1T\CAN1 -I.\src\1986VE1T\ETHERNET -I.\src\1986VE1T\PORTA -I.\src\1986VE1T\PORTB -I.\src\1986VE1T\PORTC -I.\src\1986VE1T\PORTD -I.\src\1986VE1T\PORTE -I.\src\1986VE1T\PORTF -I.\src\1986VE1T\RST_CLK -I.\src -I.\src\API\MemAPI-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I Libraries\CMSIS\CM1\DeviceSupport\MDR1986VE1T\inc-o .\obj\portd.o --omf_browse .\obj\portd.crf --depend .\obj\portd.d)
+I (.\inc\opora.h)(0x4EBA2D5A)
+I (.\inc\core_cm1.h)(0x4E520E64)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FE0ABE)
+I (.\inc\opora_can_defs.h)(0x4C7F86AC)
+I (.\inc\opora_usb_defs.h)(0x4C7F86AC)
+I (.\inc\opora_eeprom_defs.h)(0x4C7F86AC)
+I (.\inc\opora_rst_clk_defs.h)(0x4D47F8C2)
+I (.\inc\opora_dma_defs.h)(0x4C7F86AC)
+I (.\inc\opora_uart_defs.h)(0x4C7F86AC)
+I (.\inc\opora_spi_defs.h)(0x4C7F86AC)
+I (.\inc\opora_mil_std_1553_defs.h)(0x4C7F86AC)
+I (.\inc\opora_power_defs.h)(0x4C7F86AC)
+I (.\inc\opora_wwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_iwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_timer_defs.h)(0x4C7F86AC)
+I (.\inc\opora_adc_defs.h)(0x4C7F86AC)
+I (.\inc\opora_dac_defs.h)(0x4C7F86AC)
+I (.\inc\opora_port_defs.h)(0x4EA9381C)
+I (.\inc\opora_arinc429r_defs.h)(0x4FD9F84C)
+I (.\inc\opora_bkp_defs.h)(0x4C7F86AC)
+I (.\inc\opora_arinc429t_defs.h)(0x4FD9F86A)
+I (.\inc\opora_ext_bus_cntrl_defs.h)(0x4FEAEE36)
+I (.\inc\opora_ethernet_defs.h)(0x4EC51564)
+I (.\inc\opora_sys_defs.h)(0x4C7F86AC)
+I (src\1986VE1T\PORTD\PORTD.h)(0x5491074B)
+F (.\src\1986VE1T\PORTE\PORTE.c)(0x54910BF2)(-c --cpu Cortex-M1 -g -O0 --apcs=interwork -I.\inc -I.\src\TCPIP\ARP -I.\src\TCPIP\MAC -I.\src\TCPIP\ICMP -I.\src\TCPIP\IP -I.\src\TCPIP\UDP -I.\src\1986VE1T\CAN1 -I.\src\1986VE1T\ETHERNET -I.\src\1986VE1T\PORTA -I.\src\1986VE1T\PORTB -I.\src\1986VE1T\PORTC -I.\src\1986VE1T\PORTD -I.\src\1986VE1T\PORTE -I.\src\1986VE1T\PORTF -I.\src\1986VE1T\RST_CLK -I.\src -I.\src\API\MemAPI-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I Libraries\CMSIS\CM1\DeviceSupport\MDR1986VE1T\inc-o .\obj\porte.o --omf_browse .\obj\porte.crf --depend .\obj\porte.d)
+I (.\inc\opora.h)(0x4EBA2D5A)
+I (.\inc\core_cm1.h)(0x4E520E64)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FE0ABE)
+I (.\inc\opora_can_defs.h)(0x4C7F86AC)
+I (.\inc\opora_usb_defs.h)(0x4C7F86AC)
+I (.\inc\opora_eeprom_defs.h)(0x4C7F86AC)
+I (.\inc\opora_rst_clk_defs.h)(0x4D47F8C2)
+I (.\inc\opora_dma_defs.h)(0x4C7F86AC)
+I (.\inc\opora_uart_defs.h)(0x4C7F86AC)
+I (.\inc\opora_spi_defs.h)(0x4C7F86AC)
+I (.\inc\opora_mil_std_1553_defs.h)(0x4C7F86AC)
+I (.\inc\opora_power_defs.h)(0x4C7F86AC)
+I (.\inc\opora_wwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_iwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_timer_defs.h)(0x4C7F86AC)
+I (.\inc\opora_adc_defs.h)(0x4C7F86AC)
+I (.\inc\opora_dac_defs.h)(0x4C7F86AC)
+I (.\inc\opora_port_defs.h)(0x4EA9381C)
+I (.\inc\opora_arinc429r_defs.h)(0x4FD9F84C)
+I (.\inc\opora_bkp_defs.h)(0x4C7F86AC)
+I (.\inc\opora_arinc429t_defs.h)(0x4FD9F86A)
+I (.\inc\opora_ext_bus_cntrl_defs.h)(0x4FEAEE36)
+I (.\inc\opora_ethernet_defs.h)(0x4EC51564)
+I (.\inc\opora_sys_defs.h)(0x4C7F86AC)
+I (src\1986VE1T\PORTE\PORTE.h)(0x5491074B)
+F (.\src\1986VE1T\PORTF\PORTF.c)(0x54910BF2)(-c --cpu Cortex-M1 -g -O0 --apcs=interwork -I.\inc -I.\src\TCPIP\ARP -I.\src\TCPIP\MAC -I.\src\TCPIP\ICMP -I.\src\TCPIP\IP -I.\src\TCPIP\UDP -I.\src\1986VE1T\CAN1 -I.\src\1986VE1T\ETHERNET -I.\src\1986VE1T\PORTA -I.\src\1986VE1T\PORTB -I.\src\1986VE1T\PORTC -I.\src\1986VE1T\PORTD -I.\src\1986VE1T\PORTE -I.\src\1986VE1T\PORTF -I.\src\1986VE1T\RST_CLK -I.\src -I.\src\API\MemAPI-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I Libraries\CMSIS\CM1\DeviceSupport\MDR1986VE1T\inc-o .\obj\portf.o --omf_browse .\obj\portf.crf --depend .\obj\portf.d)
+I (.\inc\opora.h)(0x4EBA2D5A)
+I (.\inc\core_cm1.h)(0x4E520E64)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FE0ABE)
+I (.\inc\opora_can_defs.h)(0x4C7F86AC)
+I (.\inc\opora_usb_defs.h)(0x4C7F86AC)
+I (.\inc\opora_eeprom_defs.h)(0x4C7F86AC)
+I (.\inc\opora_rst_clk_defs.h)(0x4D47F8C2)
+I (.\inc\opora_dma_defs.h)(0x4C7F86AC)
+I (.\inc\opora_uart_defs.h)(0x4C7F86AC)
+I (.\inc\opora_spi_defs.h)(0x4C7F86AC)
+I (.\inc\opora_mil_std_1553_defs.h)(0x4C7F86AC)
+I (.\inc\opora_power_defs.h)(0x4C7F86AC)
+I (.\inc\opora_wwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_iwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_timer_defs.h)(0x4C7F86AC)
+I (.\inc\opora_adc_defs.h)(0x4C7F86AC)
+I (.\inc\opora_dac_defs.h)(0x4C7F86AC)
+I (.\inc\opora_port_defs.h)(0x4EA9381C)
+I (.\inc\opora_arinc429r_defs.h)(0x4FD9F84C)
+I (.\inc\opora_bkp_defs.h)(0x4C7F86AC)
+I (.\inc\opora_arinc429t_defs.h)(0x4FD9F86A)
+I (.\inc\opora_ext_bus_cntrl_defs.h)(0x4FEAEE36)
+I (.\inc\opora_ethernet_defs.h)(0x4EC51564)
+I (.\inc\opora_sys_defs.h)(0x4C7F86AC)
+I (src\1986VE1T\PORTF\PORTF.h)(0x5491074B)
+F (.\src\1986VE1T\RST_CLK\RST_CLK.c)(0x54917472)(-c --cpu Cortex-M1 -g -O0 --apcs=interwork -I.\inc -I.\src\TCPIP\ARP -I.\src\TCPIP\MAC -I.\src\TCPIP\ICMP -I.\src\TCPIP\IP -I.\src\TCPIP\UDP -I.\src\1986VE1T\CAN1 -I.\src\1986VE1T\ETHERNET -I.\src\1986VE1T\PORTA -I.\src\1986VE1T\PORTB -I.\src\1986VE1T\PORTC -I.\src\1986VE1T\PORTD -I.\src\1986VE1T\PORTE -I.\src\1986VE1T\PORTF -I.\src\1986VE1T\RST_CLK -I.\src -I.\src\API\MemAPI-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I Libraries\CMSIS\CM1\DeviceSupport\MDR1986VE1T\inc-o .\obj\rst_clk.o --omf_browse .\obj\rst_clk.crf --depend .\obj\rst_clk.d)
+I (.\inc\opora.h)(0x4EBA2D5A)
+I (.\inc\core_cm1.h)(0x4E520E64)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FE0ABE)
+I (.\inc\opora_can_defs.h)(0x4C7F86AC)
+I (.\inc\opora_usb_defs.h)(0x4C7F86AC)
+I (.\inc\opora_eeprom_defs.h)(0x4C7F86AC)
+I (.\inc\opora_rst_clk_defs.h)(0x4D47F8C2)
+I (.\inc\opora_dma_defs.h)(0x4C7F86AC)
+I (.\inc\opora_uart_defs.h)(0x4C7F86AC)
+I (.\inc\opora_spi_defs.h)(0x4C7F86AC)
+I (.\inc\opora_mil_std_1553_defs.h)(0x4C7F86AC)
+I (.\inc\opora_power_defs.h)(0x4C7F86AC)
+I (.\inc\opora_wwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_iwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_timer_defs.h)(0x4C7F86AC)
+I (.\inc\opora_adc_defs.h)(0x4C7F86AC)
+I (.\inc\opora_dac_defs.h)(0x4C7F86AC)
+I (.\inc\opora_port_defs.h)(0x4EA9381C)
+I (.\inc\opora_arinc429r_defs.h)(0x4FD9F84C)
+I (.\inc\opora_bkp_defs.h)(0x4C7F86AC)
+I (.\inc\opora_arinc429t_defs.h)(0x4FD9F86A)
+I (.\inc\opora_ext_bus_cntrl_defs.h)(0x4FEAEE36)
+I (.\inc\opora_ethernet_defs.h)(0x4EC51564)
+I (.\inc\opora_sys_defs.h)(0x4C7F86AC)
+I (src\1986VE1T\RST_CLK\RST_CLK.h)(0x549106AF)
+F (.\src\1986VE1T\UART1\UART1.c)(0x54910C8E)(-c --cpu Cortex-M1 -g -O0 --apcs=interwork -I.\inc -I.\src\TCPIP\ARP -I.\src\TCPIP\MAC -I.\src\TCPIP\ICMP -I.\src\TCPIP\IP -I.\src\TCPIP\UDP -I.\src\1986VE1T\CAN1 -I.\src\1986VE1T\ETHERNET -I.\src\1986VE1T\PORTA -I.\src\1986VE1T\PORTB -I.\src\1986VE1T\PORTC -I.\src\1986VE1T\PORTD -I.\src\1986VE1T\PORTE -I.\src\1986VE1T\PORTF -I.\src\1986VE1T\RST_CLK -I.\src -I.\src\API\MemAPI-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I Libraries\CMSIS\CM1\DeviceSupport\MDR1986VE1T\inc-o .\obj\uart1.o --omf_browse .\obj\uart1.crf --depend .\obj\uart1.d)
+I (.\inc\opora.h)(0x4EBA2D5A)
+I (.\inc\core_cm1.h)(0x4E520E64)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FE0ABE)
+I (.\inc\opora_can_defs.h)(0x4C7F86AC)
+I (.\inc\opora_usb_defs.h)(0x4C7F86AC)
+I (.\inc\opora_eeprom_defs.h)(0x4C7F86AC)
+I (.\inc\opora_rst_clk_defs.h)(0x4D47F8C2)
+I (.\inc\opora_dma_defs.h)(0x4C7F86AC)
+I (.\inc\opora_uart_defs.h)(0x4C7F86AC)
+I (.\inc\opora_spi_defs.h)(0x4C7F86AC)
+I (.\inc\opora_mil_std_1553_defs.h)(0x4C7F86AC)
+I (.\inc\opora_power_defs.h)(0x4C7F86AC)
+I (.\inc\opora_wwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_iwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_timer_defs.h)(0x4C7F86AC)
+I (.\inc\opora_adc_defs.h)(0x4C7F86AC)
+I (.\inc\opora_dac_defs.h)(0x4C7F86AC)
+I (.\inc\opora_port_defs.h)(0x4EA9381C)
+I (.\inc\opora_arinc429r_defs.h)(0x4FD9F84C)
+I (.\inc\opora_bkp_defs.h)(0x4C7F86AC)
+I (.\inc\opora_arinc429t_defs.h)(0x4FD9F86A)
+I (.\inc\opora_ext_bus_cntrl_defs.h)(0x4FEAEE36)
+I (.\inc\opora_ethernet_defs.h)(0x4EC51564)
+I (.\inc\opora_sys_defs.h)(0x4C7F86AC)
+I (src\1986VE1T\UART1\UART1.h)(0x54910BF2)
+F (.\src\1986VE1T\UART2\UART2.c)(0x54910C8E)(-c --cpu Cortex-M1 -g -O0 --apcs=interwork -I.\inc -I.\src\TCPIP\ARP -I.\src\TCPIP\MAC -I.\src\TCPIP\ICMP -I.\src\TCPIP\IP -I.\src\TCPIP\UDP -I.\src\1986VE1T\CAN1 -I.\src\1986VE1T\ETHERNET -I.\src\1986VE1T\PORTA -I.\src\1986VE1T\PORTB -I.\src\1986VE1T\PORTC -I.\src\1986VE1T\PORTD -I.\src\1986VE1T\PORTE -I.\src\1986VE1T\PORTF -I.\src\1986VE1T\RST_CLK -I.\src -I.\src\API\MemAPI-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I Libraries\CMSIS\CM1\DeviceSupport\MDR1986VE1T\inc-o .\obj\uart2.o --omf_browse .\obj\uart2.crf --depend .\obj\uart2.d)
+I (.\inc\opora.h)(0x4EBA2D5A)
+I (.\inc\core_cm1.h)(0x4E520E64)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FE0ABE)
+I (.\inc\opora_can_defs.h)(0x4C7F86AC)
+I (.\inc\opora_usb_defs.h)(0x4C7F86AC)
+I (.\inc\opora_eeprom_defs.h)(0x4C7F86AC)
+I (.\inc\opora_rst_clk_defs.h)(0x4D47F8C2)
+I (.\inc\opora_dma_defs.h)(0x4C7F86AC)
+I (.\inc\opora_uart_defs.h)(0x4C7F86AC)
+I (.\inc\opora_spi_defs.h)(0x4C7F86AC)
+I (.\inc\opora_mil_std_1553_defs.h)(0x4C7F86AC)
+I (.\inc\opora_power_defs.h)(0x4C7F86AC)
+I (.\inc\opora_wwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_iwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_timer_defs.h)(0x4C7F86AC)
+I (.\inc\opora_adc_defs.h)(0x4C7F86AC)
+I (.\inc\opora_dac_defs.h)(0x4C7F86AC)
+I (.\inc\opora_port_defs.h)(0x4EA9381C)
+I (.\inc\opora_arinc429r_defs.h)(0x4FD9F84C)
+I (.\inc\opora_bkp_defs.h)(0x4C7F86AC)
+I (.\inc\opora_arinc429t_defs.h)(0x4FD9F86A)
+I (.\inc\opora_ext_bus_cntrl_defs.h)(0x4FEAEE36)
+I (.\inc\opora_ethernet_defs.h)(0x4EC51564)
+I (.\inc\opora_sys_defs.h)(0x4C7F86AC)
+I (src\1986VE1T\UART2\UART2.h)(0x54910C8E)
+F (.\Таблица.txt)(0x547F02AF)()
+F (.\src\TCPIP\ARP\ARP.c)(0x54926638)(-c --cpu Cortex-M1 -g -O0 --apcs=interwork -I.\inc -I.\src\TCPIP\ARP -I.\src\TCPIP\MAC -I.\src\TCPIP\ICMP -I.\src\TCPIP\IP -I.\src\TCPIP\UDP -I.\src\1986VE1T\CAN1 -I.\src\1986VE1T\ETHERNET -I.\src\1986VE1T\PORTA -I.\src\1986VE1T\PORTB -I.\src\1986VE1T\PORTC -I.\src\1986VE1T\PORTD -I.\src\1986VE1T\PORTE -I.\src\1986VE1T\PORTF -I.\src\1986VE1T\RST_CLK -I.\src -I.\src\API\MemAPI-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I Libraries\CMSIS\CM1\DeviceSupport\MDR1986VE1T\inc-o .\obj\arp.o --omf_browse .\obj\arp.crf --depend .\obj\arp.d)
+I (.\inc\opora.h)(0x4EBA2D5A)
+I (.\inc\core_cm1.h)(0x4E520E64)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FE0ABE)
+I (.\inc\opora_can_defs.h)(0x4C7F86AC)
+I (.\inc\opora_usb_defs.h)(0x4C7F86AC)
+I (.\inc\opora_eeprom_defs.h)(0x4C7F86AC)
+I (.\inc\opora_rst_clk_defs.h)(0x4D47F8C2)
+I (.\inc\opora_dma_defs.h)(0x4C7F86AC)
+I (.\inc\opora_uart_defs.h)(0x4C7F86AC)
+I (.\inc\opora_spi_defs.h)(0x4C7F86AC)
+I (.\inc\opora_mil_std_1553_defs.h)(0x4C7F86AC)
+I (.\inc\opora_power_defs.h)(0x4C7F86AC)
+I (.\inc\opora_wwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_iwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_timer_defs.h)(0x4C7F86AC)
+I (.\inc\opora_adc_defs.h)(0x4C7F86AC)
+I (.\inc\opora_dac_defs.h)(0x4C7F86AC)
+I (.\inc\opora_port_defs.h)(0x4EA9381C)
+I (.\inc\opora_arinc429r_defs.h)(0x4FD9F84C)
+I (.\inc\opora_bkp_defs.h)(0x4C7F86AC)
+I (.\inc\opora_arinc429t_defs.h)(0x4FD9F86A)
+I (.\inc\opora_ext_bus_cntrl_defs.h)(0x4FEAEE36)
+I (.\inc\opora_ethernet_defs.h)(0x4EC51564)
+I (.\inc\opora_sys_defs.h)(0x4C7F86AC)
+I (.\src\TCPIP\MAC\MAC.h)(0x549168A7)
+I (.\src\1986VE1T\ETHERNET\ETHERNET.h)(0x549262A3)
+I (.\inc\config.h)(0x5492628A)
+I (src\TCPIP\ARP\ARP.h)(0x54917100)
+I (.\src\TCPIP\IP\IP.h)(0x54911233)
+I (.\src\API\MemAPI\MemAPI.h)(0x54940ED3)
+F (.\src\TCPIP\ICMP\ICMP.c)(0x5497C977)(-c --cpu Cortex-M1 -g -O0 --apcs=interwork -I.\inc -I.\src\TCPIP\ARP -I.\src\TCPIP\MAC -I.\src\TCPIP\ICMP -I.\src\TCPIP\IP -I.\src\TCPIP\UDP -I.\src\1986VE1T\CAN1 -I.\src\1986VE1T\ETHERNET -I.\src\1986VE1T\PORTA -I.\src\1986VE1T\PORTB -I.\src\1986VE1T\PORTC -I.\src\1986VE1T\PORTD -I.\src\1986VE1T\PORTE -I.\src\1986VE1T\PORTF -I.\src\1986VE1T\RST_CLK -I.\src -I.\src\API\MemAPI-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I Libraries\CMSIS\CM1\DeviceSupport\MDR1986VE1T\inc-o .\obj\icmp.o --omf_browse .\obj\icmp.crf --depend .\obj\icmp.d)
+I (src\TCPIP\ICMP\ICMP.h)(0x54911233)
+I (.\inc\opora.h)(0x4EBA2D5A)
+I (.\inc\core_cm1.h)(0x4E520E64)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FE0ABE)
+I (.\inc\opora_can_defs.h)(0x4C7F86AC)
+I (.\inc\opora_usb_defs.h)(0x4C7F86AC)
+I (.\inc\opora_eeprom_defs.h)(0x4C7F86AC)
+I (.\inc\opora_rst_clk_defs.h)(0x4D47F8C2)
+I (.\inc\opora_dma_defs.h)(0x4C7F86AC)
+I (.\inc\opora_uart_defs.h)(0x4C7F86AC)
+I (.\inc\opora_spi_defs.h)(0x4C7F86AC)
+I (.\inc\opora_mil_std_1553_defs.h)(0x4C7F86AC)
+I (.\inc\opora_power_defs.h)(0x4C7F86AC)
+I (.\inc\opora_wwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_iwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_timer_defs.h)(0x4C7F86AC)
+I (.\inc\opora_adc_defs.h)(0x4C7F86AC)
+I (.\inc\opora_dac_defs.h)(0x4C7F86AC)
+I (.\inc\opora_port_defs.h)(0x4EA9381C)
+I (.\inc\opora_arinc429r_defs.h)(0x4FD9F84C)
+I (.\inc\opora_bkp_defs.h)(0x4C7F86AC)
+I (.\inc\opora_arinc429t_defs.h)(0x4FD9F86A)
+I (.\inc\opora_ext_bus_cntrl_defs.h)(0x4FEAEE36)
+I (.\inc\opora_ethernet_defs.h)(0x4EC51564)
+I (.\inc\opora_sys_defs.h)(0x4C7F86AC)
+I (.\src\TCPIP\IP\IP.h)(0x54911233)
+I (.\src\TCPIP\ARP\ARP.h)(0x54917100)
+I (.\src\TCPIP\MAC\MAC.h)(0x549168A7)
+I (.\src\1986VE1T\ETHERNET\ETHERNET.h)(0x549262A3)
+I (.\inc\config.h)(0x5492628A)
+I (.\src\API\MemAPI\MemAPI.h)(0x54940ED3)
+F (.\src\TCPIP\IP\IP.c)(0x5497CB15)(-c --cpu Cortex-M1 -g -O0 --apcs=interwork -I.\inc -I.\src\TCPIP\ARP -I.\src\TCPIP\MAC -I.\src\TCPIP\ICMP -I.\src\TCPIP\IP -I.\src\TCPIP\UDP -I.\src\1986VE1T\CAN1 -I.\src\1986VE1T\ETHERNET -I.\src\1986VE1T\PORTA -I.\src\1986VE1T\PORTB -I.\src\1986VE1T\PORTC -I.\src\1986VE1T\PORTD -I.\src\1986VE1T\PORTE -I.\src\1986VE1T\PORTF -I.\src\1986VE1T\RST_CLK -I.\src -I.\src\API\MemAPI-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I Libraries\CMSIS\CM1\DeviceSupport\MDR1986VE1T\inc-o .\obj\ip.o --omf_browse .\obj\ip.crf --depend .\obj\ip.d)
+I (.\inc\opora.h)(0x4EBA2D5A)
+I (.\inc\core_cm1.h)(0x4E520E64)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FE0ABE)
+I (.\inc\opora_can_defs.h)(0x4C7F86AC)
+I (.\inc\opora_usb_defs.h)(0x4C7F86AC)
+I (.\inc\opora_eeprom_defs.h)(0x4C7F86AC)
+I (.\inc\opora_rst_clk_defs.h)(0x4D47F8C2)
+I (.\inc\opora_dma_defs.h)(0x4C7F86AC)
+I (.\inc\opora_uart_defs.h)(0x4C7F86AC)
+I (.\inc\opora_spi_defs.h)(0x4C7F86AC)
+I (.\inc\opora_mil_std_1553_defs.h)(0x4C7F86AC)
+I (.\inc\opora_power_defs.h)(0x4C7F86AC)
+I (.\inc\opora_wwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_iwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_timer_defs.h)(0x4C7F86AC)
+I (.\inc\opora_adc_defs.h)(0x4C7F86AC)
+I (.\inc\opora_dac_defs.h)(0x4C7F86AC)
+I (.\inc\opora_port_defs.h)(0x4EA9381C)
+I (.\inc\opora_arinc429r_defs.h)(0x4FD9F84C)
+I (.\inc\opora_bkp_defs.h)(0x4C7F86AC)
+I (.\inc\opora_arinc429t_defs.h)(0x4FD9F86A)
+I (.\inc\opora_ext_bus_cntrl_defs.h)(0x4FEAEE36)
+I (.\inc\opora_ethernet_defs.h)(0x4EC51564)
+I (.\inc\opora_sys_defs.h)(0x4C7F86AC)
+I (.\src\TCPIP\MAC\MAC.h)(0x549168A7)
+I (.\src\1986VE1T\ETHERNET\ETHERNET.h)(0x549262A3)
+I (.\inc\config.h)(0x5492628A)
+I (.\src\TCPIP\ARP\ARP.h)(0x54917100)
+I (.\src\TCPIP\IP\IP.h)(0x54911233)
+I (.\src\TCPIP\UDP\UDP.h)(0x5497A963)
+I (.\src\TCPIP\ICMP\ICMP.h)(0x54911233)
+I (.\src\API\MemAPI\MemAPI.h)(0x54940ED3)
+F (.\src\TCPIP\UDP\UDP.c)(0x5497B097)(-c --cpu Cortex-M1 -g -O0 --apcs=interwork -I.\inc -I.\src\TCPIP\ARP -I.\src\TCPIP\MAC -I.\src\TCPIP\ICMP -I.\src\TCPIP\IP -I.\src\TCPIP\UDP -I.\src\1986VE1T\CAN1 -I.\src\1986VE1T\ETHERNET -I.\src\1986VE1T\PORTA -I.\src\1986VE1T\PORTB -I.\src\1986VE1T\PORTC -I.\src\1986VE1T\PORTD -I.\src\1986VE1T\PORTE -I.\src\1986VE1T\PORTF -I.\src\1986VE1T\RST_CLK -I.\src -I.\src\API\MemAPI-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I Libraries\CMSIS\CM1\DeviceSupport\MDR1986VE1T\inc-o .\obj\udp.o --omf_browse .\obj\udp.crf --depend .\obj\udp.d)
+I (.\inc\opora.h)(0x4EBA2D5A)
+I (.\inc\core_cm1.h)(0x4E520E64)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FE0ABE)
+I (.\inc\opora_can_defs.h)(0x4C7F86AC)
+I (.\inc\opora_usb_defs.h)(0x4C7F86AC)
+I (.\inc\opora_eeprom_defs.h)(0x4C7F86AC)
+I (.\inc\opora_rst_clk_defs.h)(0x4D47F8C2)
+I (.\inc\opora_dma_defs.h)(0x4C7F86AC)
+I (.\inc\opora_uart_defs.h)(0x4C7F86AC)
+I (.\inc\opora_spi_defs.h)(0x4C7F86AC)
+I (.\inc\opora_mil_std_1553_defs.h)(0x4C7F86AC)
+I (.\inc\opora_power_defs.h)(0x4C7F86AC)
+I (.\inc\opora_wwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_iwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_timer_defs.h)(0x4C7F86AC)
+I (.\inc\opora_adc_defs.h)(0x4C7F86AC)
+I (.\inc\opora_dac_defs.h)(0x4C7F86AC)
+I (.\inc\opora_port_defs.h)(0x4EA9381C)
+I (.\inc\opora_arinc429r_defs.h)(0x4FD9F84C)
+I (.\inc\opora_bkp_defs.h)(0x4C7F86AC)
+I (.\inc\opora_arinc429t_defs.h)(0x4FD9F86A)
+I (.\inc\opora_ext_bus_cntrl_defs.h)(0x4FEAEE36)
+I (.\inc\opora_ethernet_defs.h)(0x4EC51564)
+I (.\inc\opora_sys_defs.h)(0x4C7F86AC)
+I (src\TCPIP\UDP\UDP.h)(0x5497A963)
+I (.\src\TCPIP\IP\IP.h)(0x54911233)
+I (.\src\Application.h)(0x5492A2D0)
+I (.\src\API\MemAPI\MemAPI.h)(0x54940ED3)
+F (.\src\TCPIP\MAC\MAC.c)(0x54926638)(-c --cpu Cortex-M1 -g -O0 --apcs=interwork -I.\inc -I.\src\TCPIP\ARP -I.\src\TCPIP\MAC -I.\src\TCPIP\ICMP -I.\src\TCPIP\IP -I.\src\TCPIP\UDP -I.\src\1986VE1T\CAN1 -I.\src\1986VE1T\ETHERNET -I.\src\1986VE1T\PORTA -I.\src\1986VE1T\PORTB -I.\src\1986VE1T\PORTC -I.\src\1986VE1T\PORTD -I.\src\1986VE1T\PORTE -I.\src\1986VE1T\PORTF -I.\src\1986VE1T\RST_CLK -I.\src -I.\src\API\MemAPI-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I Libraries\CMSIS\CM1\DeviceSupport\MDR1986VE1T\inc-o .\obj\mac.o --omf_browse .\obj\mac.crf --depend .\obj\mac.d)
+I (.\inc\opora.h)(0x4EBA2D5A)
+I (.\inc\core_cm1.h)(0x4E520E64)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FE0ABE)
+I (.\inc\opora_can_defs.h)(0x4C7F86AC)
+I (.\inc\opora_usb_defs.h)(0x4C7F86AC)
+I (.\inc\opora_eeprom_defs.h)(0x4C7F86AC)
+I (.\inc\opora_rst_clk_defs.h)(0x4D47F8C2)
+I (.\inc\opora_dma_defs.h)(0x4C7F86AC)
+I (.\inc\opora_uart_defs.h)(0x4C7F86AC)
+I (.\inc\opora_spi_defs.h)(0x4C7F86AC)
+I (.\inc\opora_mil_std_1553_defs.h)(0x4C7F86AC)
+I (.\inc\opora_power_defs.h)(0x4C7F86AC)
+I (.\inc\opora_wwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_iwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_timer_defs.h)(0x4C7F86AC)
+I (.\inc\opora_adc_defs.h)(0x4C7F86AC)
+I (.\inc\opora_dac_defs.h)(0x4C7F86AC)
+I (.\inc\opora_port_defs.h)(0x4EA9381C)
+I (.\inc\opora_arinc429r_defs.h)(0x4FD9F84C)
+I (.\inc\opora_bkp_defs.h)(0x4C7F86AC)
+I (.\inc\opora_arinc429t_defs.h)(0x4FD9F86A)
+I (.\inc\opora_ext_bus_cntrl_defs.h)(0x4FEAEE36)
+I (.\inc\opora_ethernet_defs.h)(0x4EC51564)
+I (.\inc\opora_sys_defs.h)(0x4C7F86AC)
+I (src\TCPIP\MAC\MAC.h)(0x549168A7)
+I (.\src\1986VE1T\ETHERNET\ETHERNET.h)(0x549262A3)
+I (.\inc\config.h)(0x5492628A)
+I (.\src\TCPIP\IP\IP.h)(0x54911233)
+I (.\src\TCPIP\ARP\ARP.h)(0x54917100)
+I (.\src\TCPIP\ICMP\ICMP.h)(0x54911233)
+I (.\src\API\MemAPI\MemAPI.h)(0x54940ED3)
+F (.\MemAPI.c)(0x549414C4)(-c --cpu Cortex-M1 -g -O0 --apcs=interwork -I.\inc -I.\src\TCPIP\ARP -I.\src\TCPIP\MAC -I.\src\TCPIP\ICMP -I.\src\TCPIP\IP -I.\src\TCPIP\UDP -I.\src\1986VE1T\CAN1 -I.\src\1986VE1T\ETHERNET -I.\src\1986VE1T\PORTA -I.\src\1986VE1T\PORTB -I.\src\1986VE1T\PORTC -I.\src\1986VE1T\PORTD -I.\src\1986VE1T\PORTE -I.\src\1986VE1T\PORTF -I.\src\1986VE1T\RST_CLK -I.\src -I.\src\API\MemAPI-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I Libraries\CMSIS\CM1\DeviceSupport\MDR1986VE1T\inc-o .\obj\memapi.o --omf_browse .\obj\memapi.crf --depend .\obj\memapi.d)
+I (.\inc\opora.h)(0x4EBA2D5A)
+I (.\inc\core_cm1.h)(0x4E520E64)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FE0ABE)
+I (.\inc\opora_can_defs.h)(0x4C7F86AC)
+I (.\inc\opora_usb_defs.h)(0x4C7F86AC)
+I (.\inc\opora_eeprom_defs.h)(0x4C7F86AC)
+I (.\inc\opora_rst_clk_defs.h)(0x4D47F8C2)
+I (.\inc\opora_dma_defs.h)(0x4C7F86AC)
+I (.\inc\opora_uart_defs.h)(0x4C7F86AC)
+I (.\inc\opora_spi_defs.h)(0x4C7F86AC)
+I (.\inc\opora_mil_std_1553_defs.h)(0x4C7F86AC)
+I (.\inc\opora_power_defs.h)(0x4C7F86AC)
+I (.\inc\opora_wwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_iwdg_defs.h)(0x4C7F86AC)
+I (.\inc\opora_timer_defs.h)(0x4C7F86AC)
+I (.\inc\opora_adc_defs.h)(0x4C7F86AC)
+I (.\inc\opora_dac_defs.h)(0x4C7F86AC)
+I (.\inc\opora_port_defs.h)(0x4EA9381C)
+I (.\inc\opora_arinc429r_defs.h)(0x4FD9F84C)
+I (.\inc\opora_bkp_defs.h)(0x4C7F86AC)
+I (.\inc\opora_arinc429t_defs.h)(0x4FD9F86A)
+I (.\inc\opora_ext_bus_cntrl_defs.h)(0x4FEAEE36)
+I (.\inc\opora_ethernet_defs.h)(0x4EC51564)
+I (.\inc\opora_sys_defs.h)(0x4C7F86AC)
+I (.\src\API\MemAPI\MemAPI.h)(0x54940ED3)

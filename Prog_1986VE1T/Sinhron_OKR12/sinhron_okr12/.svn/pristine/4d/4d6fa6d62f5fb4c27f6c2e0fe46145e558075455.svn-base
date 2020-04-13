@@ -1,0 +1,25 @@
+--cpu Cortex-M1
+".\obj\application.o"
+".\obj\startup.o"
+".\obj\can1.o"
+".\obj\porta.o"
+".\obj\portb.o"
+".\obj\ethernet.o"
+".\obj\portc.o"
+".\obj\portd.o"
+".\obj\porte.o"
+".\obj\portf.o"
+".\obj\rst_clk.o"
+".\obj\uart1.o"
+".\obj\uart2.o"
+".\obj\terminal_1.o"
+".\obj\arp.o"
+".\obj\icmp.o"
+".\obj\ip.o"
+".\obj\udp.o"
+".\obj\mac.o"
+".\obj\memapi.o"
+--strict --scatter ".\obj\UDPCANUART.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\lst\UDPCANUART.map" -o .\obj\UDPCANUART.axf

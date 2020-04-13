@@ -1,0 +1,21 @@
+*** Creating Trace Output File '1986ve1bootuart.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"startup_bootuart.o"'
+### List of Objects: adding '"bootuart.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M1 "startup_bootuart.o" "bootuart.o" 
+--strict --scatter "1986ve1bootuart.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\1986ve1bootuart.map" -o 1986ve1bootuart.axf### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '1986ve1bootuart.axf'
+### ADS-LD Command File: '1986ve1bootuart.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '1986ve1bootuart.lnp', Handle=0x00000904
+### Writing '.lnp' file
+### ADS-LD Command file '1986ve1bootuart.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

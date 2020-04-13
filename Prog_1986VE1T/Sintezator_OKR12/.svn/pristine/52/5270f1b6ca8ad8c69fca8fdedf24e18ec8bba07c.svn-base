@@ -1,0 +1,30 @@
+
+#include "opora.h"
+
+typedef struct ShiftReg   //flags
+{
+  volatile PORT_TypeDef *port_data;  //порт данных и адреса
+  unsigned int      	  pin_data;  //ножки данных и адреса
+
+  volatile PORT_TypeDef  *adr;  //сигнал выбора между адресом регистров и данными регистров
+  unsigned char       pin_adr;  //выбор между адресом регистров и данными регистров
+
+  volatile PORT_TypeDef  *wrn;  // сигнал записи
+  unsigned char   wrn_DDS;  //сигнал записи
+
+  volatile PORT_TypeDef  *rdn;  // сигнал чтения
+  unsigned char   rdn_DDS;  //сигнал чтения
+
+  volatile PORT_TypeDef  *csn;  // сигнал выбора микросхемы
+  unsigned char   csn_DDS;  //сигнал выбора микросхемы
+
+  volatile PORT_TypeDef *SCSN;  // сигнал выбора параллельного интерфейса
+  unsigned char  SCSN_DDS;  //сигнал выбора параллельного интерфейса 
+
+  volatile PORT_TypeDef *RSTN;  // сигнал выбора параллельного интерфейса
+  unsigned char  RSTN_DDS;  //сигнал выбора параллельного интерфейса 
+   
+} ShiftReg;
+
+
+ //Init_pins_for_DDS   pins_DDS;  // объявляю структуру 

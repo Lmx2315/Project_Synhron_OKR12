@@ -1,0 +1,12 @@
+
+#include "opora.h"
+#include "DDS1508pl1t.h"
+
+#define dds_data PORTA->RXTX; //устанавливаем  данные
+
+
+void Write_DDS(unsigned short data, unsigned short adr)
+{
+
+
+}

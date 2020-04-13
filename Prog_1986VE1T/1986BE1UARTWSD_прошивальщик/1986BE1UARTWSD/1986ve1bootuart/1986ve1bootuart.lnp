@@ -1,0 +1,5 @@
+--cpu Cortex-M1 "startup_bootuart.o" "bootuart.o" 
+--strict --scatter "1986ve1bootuart.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\1986ve1bootuart.map" -o 1986ve1bootuart.axf

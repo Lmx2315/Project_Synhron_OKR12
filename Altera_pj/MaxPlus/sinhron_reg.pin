@@ -1,0 +1,175 @@
+-- Copyright (C) 1988-2002 Altera Corporation
+-- Any megafunction design, and related net list (encrypted or decrypted),
+-- support information, device programming or simulation file, and any other
+-- associated documentation or information provided by Altera or a partner
+-- under Altera's Megafunction Partnership Program may be used only to
+-- program PLD devices (but not masked PLD devices) from Altera.  Any other
+-- use of such megafunction design, net list, support information, device
+-- programming or simulation file, or any other related documentation or
+-- information is prohibited for any other purpose, including, but not
+-- limited to modification, reverse engineering, de-compiling, or use with
+-- any other silicon devices, unless such use is explicitly licensed under
+-- a separate agreement with Altera or a megafunction partner.  Title to
+-- the intellectual property, including patents, copyrights, trademarks,
+-- trade secrets, or maskworks, embodied in any such megafunction design,
+-- net list, support information, device programming or simulation file, or
+-- any other related documentation or information provided by Altera or a
+-- megafunction partner, remains with Altera, the megafunction partner, or
+-- their respective licensors.  No other licenses, including any licenses
+-- needed under any third party's intellectual property, are provided herein.
+
+
+
+N.C. = No Connect. This pin has no internal connection to the device.
+VCCINT = Dedicated power pin, which MUST be connected to VCC (2.5 volts).
+VCCIO = Dedicated power pin, which MUST be connected to VCC (2.5 volts).
+GND = Dedicated ground pin or unused dedicated input, which MUST be connected to GND.
+RESERVED = Unused I/O pin, which MUST be left unconnected.
+
+----------------------------------------------------------------------------
+
+CHIP "sinhron_reg" ASSIGNED TO AN EPF10K30ETC144-1
+TCK                              : 1
+CONF_DONE                        : 2
+nCEO                             : 3
+TDO                              : 4
+VCCIO                            : 5
+VCCINT                           : 6
+TNO                              : 7
+adr_out2                         : 8
+TNC                              : 9
+adr_out3                         : 10
+dta_from_bus7                    : 11
+data_in6                         : 12
+TKP_mk                           : 13
+a1                               : 14
+GND                              : 15
+GND                              : 16
+dto7                             : 17
+dto6                             : 18
+adr_out0                         : 19
+adr_out1                         : 20
+a3                               : 21
+rd_bus                           : 22
+ale4                             : 23
+VCCIO                            : 24
+VCCINT                           : 25
+TNP_mk                           : 26
+dta_from_bus1                    : 27
+dto1                             : 28
+TKI_mk                           : 29
+dta_from_bus5                    : 30
+dto3                             : 31
+dto2                             : 32
+TNO_mk                           : 33
+TMS                              : 34
+nSTATUS                          : 35
+data_in12                        : 36
+RESERVED                         : 37
+RESERVED                         : 38
+RESERVED                         : 39
+GND                              : 40
+data_in4                         : 41
+RESERVED                         : 42
+dta_from_bus6                    : 43
+RESERVED                         : 44
+VCCIO                            : 45
+RESERVED                         : 46
+RESERVED                         : 47
+RESERVED                         : 48
+adr1                             : 49
+GND                              : 50
+RESERVED                         : 51
+VCCINT                           : 52
+VCCINT                           : 53
+reset                            : 54
+clk                              : 55
+adr3                             : 56
+GND                              : 57
+GND                              : 58
+wr                               : 59
+RESERVED                         : 60
+VCCIO                            : 61
+adr7                             : 62
+data_in15                        : 63
+adr5                             : 64
+data_in9                         : 65
+GND                              : 66
+RESERVED                         : 67
+RESERVED                         : 68
+data_in10                        : 69
+data_in1                         : 70
+VCCIO                            : 71
+adr_out7                         : 72
+RESERVED                         : 73
+nCONFIG                          : 74
+VCCINT                           : 75
+MSEL1                            : 76
+MSEL0                            : 77
+dta_from_bus3                    : 78
+dto4                             : 79
+dta_from_bus2                    : 80
+dto5                             : 81
+dta_from_bus4                    : 82
+TKI                              : 83
+GND                              : 84
+GND                              : 85
+TNC_mk                           : 86
+dta_from_bus0                    : 87
+ale3                             : 88
+TKP                              : 89
+TNI                              : 90
+rd                               : 91
+wr_bus                           : 92
+VCCINT                           : 93
+VCCIO                            : 94
+TOBM_mk                          : 95
+TNI_mk                           : 96
+ale1                             : 97
+a2                               : 98
+ale2                             : 99
+adr_out6                         : 100
+adr_out5                         : 101
+TOBM                             : 102
+GND                              : 103
+GND                              : 104
+TDI                              : 105
+nCE                              : 106
+DCLK                             : 107
+DATA0                            : 108
+RESERVED                         : 109
+data_in13                        : 110
+adr_out4                         : 111
+data_in8                         : 112
+data_in14                        : 113
+RESERVED                         : 114
+VCCIO                            : 115
+data_in0                         : 116
+adr4                             : 117
+RESERVED                         : 118
+RESERVED                         : 119
+adr6                             : 120
+data_in2                         : 121
+RESERVED                         : 122
+VCCINT                           : 123
+adr0                             : 124
+data_in5                         : 125
+data_in11                        : 126
+GND                              : 127
+RESERVED                         : 128
+GND                              : 129
+RESERVED                         : 130
+data_in3                         : 131
+a4                               : 132
+RESERVED                         : 133
+VCCIO                            : 134
+data_in7                         : 135
+RESERVED                         : 136
+adr2                             : 137
+dto0                             : 138
+GND                              : 139
+TNP                              : 140
+RESERVED                         : 141
+RESERVED                         : 142
+RESERVED                         : 143
+RESERVED                         : 144

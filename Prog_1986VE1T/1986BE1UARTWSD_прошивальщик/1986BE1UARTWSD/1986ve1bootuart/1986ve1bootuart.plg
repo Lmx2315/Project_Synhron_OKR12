@@ -1,0 +1,18 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Prog_1986VE1T\1986BE1UARTWSD\1986BE1UARTWSD\1986ve1bootuart\1986ve1bootuart.uvproj
+Project File Date:  12/03/2013
+
+<h2>Output:</h2>
+Rebuild target 'Target 1'
+assembling startup_bootuart.s...
+compiling bootuart.c...
+linking...
+1986ve1bootuart.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
+1986ve1bootuart.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
+Program Size: Code=992 RO-data=20 RW-data=12 ZI-data=388  
+FromELF: creating hex file...
+"1986ve1bootuart.axf" - 0 Error(s), 2 Warning(s).

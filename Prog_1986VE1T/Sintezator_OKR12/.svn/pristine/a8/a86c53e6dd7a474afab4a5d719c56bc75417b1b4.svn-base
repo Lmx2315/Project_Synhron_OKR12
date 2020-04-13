@@ -1,0 +1,119 @@
+
+#include "opora.h"
+
+typedef struct ShiftReg   //flags //Init_pins_for_DDS   pins_DDS;  // объявляю структуру 
+{
+  volatile PORT_TypeDef *port_data;  //порт данных и адреса
+  unsigned int      	  pin_data;  //ножки данных и адреса
+
+  volatile PORT_TypeDef  *adr;  //сигнал выбора между адресом регистров и данными регистров
+  unsigned char       pin_adr;  //выбор между адресом регистров и данными регистров
+
+  volatile PORT_TypeDef  *wrn;  // сигнал записи
+  unsigned char   wrn_DDS;  //сигнал записи
+
+  volatile PORT_TypeDef  *rdn;  // сигнал чтения
+  unsigned char   rdn_DDS;  //сигнал чтения
+
+  volatile PORT_TypeDef  *csn;  // сигнал выбора микросхемы
+  unsigned char   csn_DDS;  //сигнал выбора микросхемы
+
+  volatile PORT_TypeDef *SCSN;  // сигнал выбора параллельного интерфейса
+  unsigned char  SCSN_DDS;  //сигнал выбора параллельного интерфейса 
+
+  volatile PORT_TypeDef *RSTN;  // сигнал выбора параллельного интерфейса
+  unsigned char  RSTN_DDS;  //сигнал выбора параллельного интерфейса 
+   
+} ShiftReg;
+
+
+typedef struct reg_1508pl1t   //flags //Init_pins_for_DDS   pins_DDS;  // объявляю структуру 
+{
+  unsigned short       CH1_LS_CTR; //Управление синтезом ЛЧМ.
+  unsigned short          CH1_TSW; //Управление временем переключения параметров синтеза.
+
+  unsigned short    T_SEL_STATE;   //Отладочный регист: текущее состояние выводов SEL
+  unsigned short        T_E_SEL;   //Отладочный регистр: эффективный SEL
+
+  unsigned short        ROUTE;   //Управление потоком данных и рандомизацией
+
+  unsigned short        TC_L;    //Делитель чиповой скорости, биты [15: 0]
+  unsigned short        TC_H;    //Делитель чиповой скорости, биты [31:16]
+
+  unsigned short    CH1_LS_TPH1_L; //Регистр длительности 1-ой фазы ЛЧМ-сигнала [15:0]
+  unsigned short    CH1_LS_TPH1_M; //Регистр длительности 1-ой фазы ЛЧМ-сигнала [31:16]
+  unsigned short    CH1_LS_TPH1_H; //Регистр длительности 1-ой фазы ЛЧМ-сигнала [45:32]
+
+  unsigned short    CH1_LS_TPH2_L; //Регистр длительности 2-ой фазы ЛЧМ-сигнала [15:0]
+  unsigned short    CH1_LS_TPH2_M; //Регистр длительности 2-ой фазы ЛЧМ-сигнала [31:16]
+  unsigned short    CH1_LS_TPH2_H; //Регистр длительности 2-ой фазы ЛЧМ-сигнала [45:32]
+
+  unsigned short    CH1_LS_TPH3_L; //Регистр длительности 3-ой фазы ЛЧМ-сигнала [15:0]
+  unsigned short    CH1_LS_TPH3_M; //Регистр длительности 3-ой фазы ЛЧМ-сигнала [31:16]
+  unsigned short    CH1_LS_TPH3_H; //Регистр длительности 3-ой фазы ЛЧМ-сигнала [45:32]
+
+  unsigned short    CH1_LS_TPH4_L; //Регистр длительности 4-ой фазы ЛЧМ-сигнала [15:0]
+  unsigned short    CH1_LS_TPH4_M; //Регистр длительности 4-ой фазы ЛЧМ-сигнала [31:16]
+  unsigned short    CH1_LS_TPH4_H; //Регистр длительности 4-ой фазы ЛЧМ-сигнала [45:32]
+
+  unsigned short      CH1_LS_F1_L; //Регистр начальной частоты ЛЧМ 1 [15:0]
+  unsigned short      CH1_LS_F1_M; //Регистр начальной частоты ЛЧМ 1 [31:16]
+  unsigned short      CH1_LS_F1_H; //Регистр начальной частоты ЛЧМ 1 [47:32]
+
+  unsigned short      CH1_LS_F2_L; //Регистр начальной частоты ЛЧМ 2 [15:0]
+  unsigned short      CH1_LS_F2_M; //Регистр начальной частоты ЛЧМ 2 [31:16]
+  unsigned short      CH1_LS_F2_H; //Регистр начальной частоты ЛЧМ 2 [47:32]
+
+  unsigned short       CH1_LS_Ph1; //Регистр начальной фазы ЛЧМ 1
+  unsigned short       CH1_LS_Ph2; //Регистр начальной фазы ЛЧМ 2
+
+  unsigned short     CH1_LS_dF1_L; //Регистр приращения частоты 1 [15: 0]
+  unsigned short     CH1_LS_dF1_M; //Регистр приращения частоты 1 [31:16]
+  unsigned short     CH1_LS_dF1_H; //Регистр приращения частоты 1 [47:32]
+
+  unsigned short     CH1_LS_dF2_L; //Регистр приращения частоты 2 [15: 0]
+  unsigned short     CH1_LS_dF2_M; //Регистр приращения частоты 2 [31:16]
+  unsigned short     CH1_LS_dF2_H; //Регистр приращения частоты 2 [47:32]
+
+  unsigned short     CH1_dPh_all_L; //Запись приращения фазы [15:0] во все профили
+  unsigned short     CH1_dPh_all_M; //Запись приращения фазы [31:16] во все профили
+  unsigned short     CH1_dPh_all_H; //Запись приращения фазы [47:32] во все профили
+
+  unsigned short         CH1_P_all; //Запись смещения фазы во все профили
+  unsigned short       CH1_Mul_all; //Запись коэффициента усиления во все профили
+
+  unsigned short    CH1_Offset_all; //Запись постоянного смещения во все профили
+
+  unsigned short        CH1_dPh0_L; //Регистр приращения фазы [15: 0], профиль 0
+  unsigned short        CH1_dPh0_M; //Регистр приращения фазы [31:16], профиль 0
+  unsigned short        CH1_dPh0_H; //Регистр приращения фазы [47:32], профиль 0
+
+  unsigned short            CH1_P0; //Регистр управления фазой, профиль 0
+  unsigned short          CH1_Mul0; //Регистр управления амплитудой, профиль 0
+
+  unsigned short       CH1_Offset0; //Регистр упр. смещением выходного сигнала, профиль 0
+
+  unsigned short               CLR; //Очистка аккумуляторов фазы, запуск и остановка ЛЧМ
+  unsigned short              SYNC; //Управление синхронизацией
+  unsigned short               CTR; //Регистр управления
+
+  unsigned short           SEL_REG; //Выбор активного профиля синтеза
+  unsigned short             DEVID; //Идентификатор устройства, только чтение
+  unsigned short             SWRST; //Регистр программного сброса
+
+
+} reg_1508pl1t;
+
+typedef struct DDS_param   //flags //Init_pins_for_DDS   pins_DDS;  // объявляю структуру 
+{
+  unsigned char       regim;// режим работы синтезатора 1 - ЛЧМ , 0 - моночастота
+  unsigned int   	   F0  ;// частота моногармоническая
+  unsigned int  	  F_low;// частота нижняя в Гц
+  unsigned int 	     F_high;// частота верхняя в Гц
+  unsigned int   	   dImp;// длительность импульса в мкс
+  unsigned int   	   FImp;// частота следования импульсов в Гц
+  unsigned int    		  A;// аплитуда импульсов в Дб
+  unsigned char   znak_LCHM;// направление ЛЧМ 1 или -1
+    
+} DDS_param;
+

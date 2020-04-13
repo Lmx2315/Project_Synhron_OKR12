@@ -1,0 +1,191 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         
+    2 00000000 00000080 
+                       Stack_Size
+                               EQU              0x00000080
+    3 00000000         
+    4 00000000                 AREA             STACK, NOINIT, READWRITE, ALIGN
+=3
+    5 00000000         Stack_Mem
+                               SPACE            Stack_Size
+    6 00000080         __initial_sp
+    7 00000080         
+    8 00000080                 PRESERVE8
+    9 00000080                 THUMB
+   10 00000080         
+   11 00000080         ; Vector Table Mapped to Address 0 at Reset
+   12 00000080         
+   13 00000080                 AREA             RESET, DATA, READONLY
+   14 00000000         
+   15 00000000                 EXPORT           __Vectors
+   16 00000000                 EXPORT           __Vectors_End
+   17 00000000                 EXPORT           __Vectors_Size
+   18 00000000         
+   19 00000000 00000000 
+                       __Vectors
+                               DCD              __initial_sp ; Top of Stack
+   20 00000004 00000000        DCD              Reset_Handler ; Reset Handler
+   21 00000008         __Vectors_End
+   22 00000008         
+   23 00000008 00000008 
+                       __Vectors_Size
+                               EQU              __Vectors_End - __Vectors
+   24 00000008         
+   25 00000008                 AREA             |.text|, CODE, READONLY
+   26 00000000         
+   27 00000000         
+   28 00000000         
+   29 00000000         ; Reset Handler
+   30 00000000         
+   31 00000000         Reset_Handler
+                               PROC
+   32 00000000                 EXPORT           Reset_Handler             [WEAK
+]
+   33 00000000                 IMPORT           bootuart
+   34 00000000 4802            LDR              R0, = __Vectors
+   35 00000002 6801            LDR              R1,[R0]
+   36 00000004 F381 8808       MSR              MSP,R1
+   37 00000008 4801            LDR              R0, = bootuart
+   38 0000000A 4700            BX               R0
+   39 0000000C                 ENDP
+   40 0000000C         
+   41 0000000C         
+   42 0000000C                 END
+              00000000 
+              00000000 
+Command Line: --debug --xref --cpu=Cortex-M1 --apcs=interwork --depend=startup_
+bootuart.d -ostartup_bootuart.o -IC:\Keil2\ARM\RV31\INC -IC:\Keil2\ARM\CMSIS\In
+clude --list=startup_bootuart.lst startup_bootuart.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+STACK 00000000
+
+Symbol: STACK
+   Definitions
+      At line 4 in file startup_bootuart.s
+   Uses
+      None
+Comment: STACK unused
+Stack_Mem 00000000
+
+Symbol: Stack_Mem
+   Definitions
+      At line 5 in file startup_bootuart.s
+   Uses
+      None
+Comment: Stack_Mem unused
+__initial_sp 00000080
+
+Symbol: __initial_sp
+   Definitions
+      At line 6 in file startup_bootuart.s
+   Uses
+      At line 19 in file startup_bootuart.s
+Comment: __initial_sp used once
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 13 in file startup_bootuart.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 19 in file startup_bootuart.s
+   Uses
+      At line 15 in file startup_bootuart.s
+      At line 23 in file startup_bootuart.s
+      At line 34 in file startup_bootuart.s
+
+__Vectors_End 00000008
+
+Symbol: __Vectors_End
+   Definitions
+      At line 21 in file startup_bootuart.s
+   Uses
+      At line 16 in file startup_bootuart.s
+      At line 23 in file startup_bootuart.s
+
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 25 in file startup_bootuart.s
+   Uses
+      None
+Comment: .text unused
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 31 in file startup_bootuart.s
+   Uses
+      At line 20 in file startup_bootuart.s
+      At line 32 in file startup_bootuart.s
+
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Absolute symbols
+
+Stack_Size 00000080
+
+Symbol: Stack_Size
+   Definitions
+      At line 2 in file startup_bootuart.s
+   Uses
+      At line 5 in file startup_bootuart.s
+Comment: Stack_Size used once
+__Vectors_Size 00000008
+
+Symbol: __Vectors_Size
+   Definitions
+      At line 23 in file startup_bootuart.s
+   Uses
+      At line 17 in file startup_bootuart.s
+Comment: __Vectors_Size used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+bootuart 00000000
+
+Symbol: bootuart
+   Definitions
+      At line 33 in file startup_bootuart.s
+   Uses
+      At line 37 in file startup_bootuart.s
+Comment: bootuart used once
+1 symbol
+343 symbols in table

@@ -1,0 +1,113 @@
+#ifndef __TERMINAL_c__
+#define __TERMINAL_c__
+
+#include "opora.h"
+#include "TERMINAL.h"
+
+
+//--- Terminal configuration ---
+void Menu()
+{
+
+}
+
+
+void Menu1(char a)
+ 
+ {
+//***************************************************************************
+
+    int i;
+	
+ 
+ for (i=0;i<20;i++) sendT("\r\n");    // очистка терминала
+	for (i=0; i<64; i++) sendT ("*");  // вывод приветствия
+	sendT("Строка\r\n");
+	sendT("\r\n");
+	sendT("\r\n");
+	sendT("\r\n");
+	sendT("\r\n");
+	sendT("......Terminal B600-1....\r\n");
+	sendT("\r\n");
+	sendT("\r\n");
+	sendT("\r\n");
+	sendT("MENU :\r\n");
+	sendT("-------\r\n");
+	sendT("~ - стартовый байт\r\n");
+	sendT("1 - адрес абонента\r\n");
+	sendT("start_TCP -  команда\r\n");
+	sendT("=30000000 - данные команды\r\n");
+	sendT(";- конец пачки \r\n");
+	sendT(".............. \r\n");
+	sendT("Адреса: \r\n");
+	sendT("1 - 1У-К614   , синхронизатор мастер: \r\n");
+	sendT("2 - 1У-К614-1 , синхронизатор резерв\r\n");
+	sendT("3 - 1У-К612 , синтезатор частоты излучения  \r\n");
+	sendT("4 - 1У-К613 , синтезатор частоты гетеродина  \r\n");
+	sendT("5 - 1У-К615 , синтезатор частоты гетеродина  \r\n");
+	sendT("6 - 1У-К611 , ФОЧ  \r\n");
+	sendT("+++++++++++++++++++\r\n");
+	sendT("~1 wrn_dds_1;\r\n");
+	sendT("~1 wrn_dds_0;\r\n");
+	sendT("~1 init_dds;\r\n");
+	sendT("~1 rd_dds;\r\n");
+	sendT("~1 wr_dds=1;\r\n");
+	sendT("~1 help;\r\n");
+	sendT("~1 config_Ethernet;\r\n");
+	sendT("~1 состояние;\r\n");
+	sendT("~1 включить;\r\n");
+	sendT("~1 выключить;\r\n");
+	sendT("~1 UDP_TCP_test;\r\n");
+	sendT("~1 синхросигналы;\r\n");
+	sendT("~1 PPI_пачка_К612;\r\n");
+	sendT("~1 PPI_пачка_К613;\r\n");
+	sendT("~1 Включить_синтезатор;\r\n");
+	sendT("~3 Включить_ЛЧМ_UP;\r\n");
+	sendT("~3 Включить_ЛЧМ_DOWN;\r\n");
+	sendT("~3 Установить_F0=30000000;\r\n");
+	sendT("~3 Установить_частоту_F_low=30000000;\r\n");
+	sendT("~3 Установить_частоту_F_high=32000000;\r\n");
+	sendT("~3 Подвинуть_частоту_вверх=100000;\r\n");
+	sendT("~3 Подвинуть_частоту_вниз=100000;\r\n");
+	sendT("~3 Подвинуть_фазу_вверх;\r\n");
+	sendT("~3 Подвинуть_фазу_вниз;\r\n");
+	sendT("~3 Подвинуть_амплитуду_вверх;\r\n");
+	sendT("~3 Подвинуть_амплитуду_вниз;\r\n");
+	sendT("~1 сигнал_авария_ON;\r\n");
+	sendT("~1 сигнал_авария_OFF;\r\n");
+	sendT("~1 SPORT_data;\r\n");
+	sendT("~3 показать_спектр;\r\n");
+    sendT("~3 стоп_спектр;\r\n");
+    sendT("~6 F64(on);\r\n");
+    sendT("~6 F64(off);\r\n");
+    sendT("~6 F160(on);\r\n");
+    sendT("~6 F160(off);\r\n"); 
+    sendT("~6 F360(on);\r\n");
+    sendT("~6 F360(off);\r\n");
+    sendT("~6 F400(on);\r\n");
+    sendT("~6 F400(off);\r\n");   
+    sendT("~6 ADC(on);\r\n");
+    sendT("~6 сигналы_контроля;\r\n");  
+    sendT("~6 контроль_уровней;\r\n");
+    sendT("~6 массив_ДБм;\r\n");
+	sendT("~6 init_K611;\r\n");
+	sendT("~1 K611;\r\n");
+	sendT("~5 INPORT:xxxxxx;\r\n");
+	sendT("~5 OUTPORT:xxxxxx;\r\n");
+	sendT("\r\n");
+	sendT("\r\n");
+	sendT("++++++++++++++++++++\r\n");
+	sendT("\r\n");
+	sendT("\r\n");
+	//for (i=0; i<64; i++) zputs ("*",1);  // вывод приветствия
+	//for (i=0;i<10;i++) puts("\r",1);  // очистка терминала
+	sendT("\r\n");
+	//*******************************************************************************
+
+
+	
+	}
+
+
+
+#endif // __TERMINAL_c__

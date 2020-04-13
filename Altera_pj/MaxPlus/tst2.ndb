@@ -1,0 +1,227 @@
+NDB006
+The number of symbol table entries is: 3
+The length of the symbol table is: 61
+
+Index Hierarchy Path
+----- --------------
+!	&null_hpath&
+.	|lpm_add_sub:82|
+?	|lpm_add_sub:82|addcore:adder|
+
+The number of name info structs is : 213
+
+InsOrder BitField SymTableIndex NextSyn SynParent Loc ChainType NextChain ChainParent FanOut DirExp ParExp ShareExp NodeName
+-------- -------- ------------- ------- --------- --- --------- --------- ----------- ------ ------ ------ -------- --------
+"	IeEA	!	54	0	:10	v
+#	IeEA	!	54	0	:11	w
+$	IeEA	!	54	0	:12	x
+%	IeEA	!	54	0	:13	y
+&	IeEA	!	54	0	:14	z
+'	IeEA	!	54	0	:15	{
+(	IeEA	!	54	0	:16	|
+)	IeEA	!	54	0	:17	}
+*	IeEA	!	54	0	:18	~
++	IeEA	!	54	0	:19	"!
+,	IeEA	!	54	0	:20	""
+-	IeEA	!	54	0	:21	"#
+.	IeEA	!	54	0	:22	"$
+/	IeEA	!	54	0	:23	"%
+0	IeEA	!	54	0	:24	"&
+1	IeEA	!	54	0	:25	"'
+2	LGPw	!	"#	48	0	2	Z	2	:26	"(
+3	LGPw	!	""	48	0	3	2	[	3	:27	")
+4	LGPw	!	"!	48	0	4	2	3	\	4	:28	"*
+5	LGPw	!	~	48	0	5	"Z	3	4	]	5	:29	"+
+6	LGPw	!	}	48	0	5	"W	4	5	^	6	:30	",
+7	LGPw	!	|	48	0	5	"T	5	6	_	7	:31	"-
+8	LGPw	!	"+	48	0	5	"Q	6	7	`	8	:32	".
+9	LGPw	!	"*	48	0	6	"N	"Q	7	8	a	9	:33	"/
+:	LGPw	!	")	48	0	3	"K	8	:	:34	"0
+;	LGPw	!	"(	48	0	2	"H	;	:35	"1
+<	LGPw	!	"'	48	0	3	"H	;	<	:36	"2
+=	LGPw	!	"&	48	0	4	"H	;	<	=	:37	"3
+>	LGPw	!	"%	48	0	2	"?	>	:38	"4
+?	LGPw	!	"$	48	0	3	"?	>	?	:39	"5
+@	LGPw	!	{	48	0	4	"?	>	?	@	:40	"6
+A	LGPw	!	z	48	0	5	"?	>	?	@	A	:41	"7
+B	IeEA	!	55	0	:42	"8
+C	IeEA	!	55	0	:43	"9
+D	IeEA	!	55	0	:44	":
+E	IeEA	!	55	0	:45	";
+F	IeEA	!	55	0	:46	"<
+G	IeEA	!	55	0	:47	"=
+H	IeEA	!	55	0	:48	">
+I	IeEA	!	55	0	:49	"?
+J	IeEA	!	55	0	:50	"@
+K	IeEA	!	55	0	:51	"A
+L	IeEA	!	55	0	:52	"B
+M	IeEA	!	55	0	:53	"C
+N	IeEA	!	55	0	:54	"D
+O	IeEA	!	55	0	:55	"E
+P	IeEA	!	55	0	:56	"F
+Q	IeEA	!	55	0	:57	"G
+R	It0+	!	q	47	0	:58	"H
+S	It0+	!	p	47	0	:59	"I
+T	It0+	!	o	47	0	:60	"J
+U	It0+	!	n	47	0	:61	"K
+V	It0+	!	m	47	0	:62	"L
+W	It0+	!	l	47	0	:63	"M
+X	It0+	!	y	47	0	:64	"N
+Y	It0+	!	x	47	0	:65	"O
+Z	LGPw	!	w	47	0	1	"4	:66	"P
+[	LGPw	!	v	47	0	1	"3	:67	"Q
+\	LGPw	!	u	47	0	1	"2	:68	"R
+]	LGPw	!	t	47	0	1	"1	:69	"S
+^	LGPw	!	s	47	0	1	"0	:70	"T
+_	LGPw	!	r	47	0	1	"/	:71	"U
+`	LGPw	!	k	47	0	1	".	:72	"V
+a	LGPw	!	j	47	0	1	"-	:73	"W
+b	IeEA	!	61	0	:74	"X
+c	IeEA	!	62	0	:75	"Y
+d	IeEA	!	64	0	:76	"Z
+e	IeEA	!	65	0	:77	"[
+f	IeEA	!	66	0	:78	"\
+g	IeEA	!	69	0	:79	"]
+h	IeEA	!	70	0	:80	"^
+i	IeEA	!	60	0	:81	"_
+j	INvO	!	a	a0	"W
+k	INvO	!	`	a1	"V
+l	INum	!	W	a10	"M
+m	INum	!	V	a11	"L
+n	INum	!	U	a12	"K
+o	INum	!	T	a13	"J
+p	INum	!	S	a14	"I
+q	INum	!	R	a15	"H
+r	INvO	!	_	a2	"U
+s	INvO	!	^	a3	"T
+t	INvO	!	]	a4	"S
+u	INvO	!	\	a5	"R
+v	INvO	!	[	a6	"Q
+w	INvO	!	Z	a7	"P
+x	INum	!	Y	a8	"O
+y	INum	!	X	a9	"N
+z	INvO	!	A	b0	"7
+{	INvO	!	@	b1	"6
+|	INvO	!	7	b10	"-
+}	INvO	!	6	b11	",
+~	INvO	!	5	b12	"+
+"!	INvO	!	4	b13	"*
+""	INvO	!	3	b14	")
+"#	INvO	!	2	b15	"(
+"$	INvO	!	?	b2	"5
+"%	INvO	!	>	b3	"4
+"&	INvO	!	=	b4	"3
+"'	INvO	!	<	b5	"2
+"(	INvO	!	;	b6	"1
+")	INvO	!	:	b7	"0
+"*	INvO	!	9	b8	"/
+"+	INvO	!	8	b9	".
+",	(@\6H	!	45	0	24	2	3	4	5	6	7	8	9	:	;	<	=	>	?	@	A	Z	[	\	]	^	_	`	a	clk	m
+"-	IeE[	!	42	0	o0	u
+".	IeE[	!	28	0	o1	n
+"/	IeE[	!	30	0	o2	o
+"0	IeE[	!	32	0	o3	p
+"1	IeE[	!	34	0	o4	q
+"2	IeE[	!	36	0	o5	r
+"3	IeE[	!	38	0	o6	s
+"4	IeE[	!	40	0	o7	t
+"5	IeEA	.	713	44	:226	%J
+"6	IeEA	.	713	44	:227	%K
+"7	IeEA	?	312	28	:101	&B
+"8	IeEA	?	312	52	:102	&C
+"9	IeEA	?	312	64	:103	&D
+":	IeEA	?	312	28	:105	&F
+";	IeEA	?	312	52	:106	&G
+"<	IeEA	?	312	64	:107	&H
+"=	IeEA	?	312	28	:109	&J
+">	IeEA	?	312	52	:110	&K
+"?	L8f/	?	312	64	4	"H	;	<	=	:111	&L
+"@	IeEA	?	312	28	:113	&N
+"A	IeEA	?	312	52	:114	&O
+"B	IeEA	?	312	64	:115	&P
+"C	IeEA	?	312	28	:117	&R
+"D	IeEA	?	312	52	:118	&S
+"E	IeEA	?	312	64	:119	&T
+"F	IeEA	?	312	28	:121	&V
+"G	IeEA	?	312	52	:122	&W
+"H	L8f/	?	312	64	3	"K	8	:	:123	&X
+"I	IeEA	?	312	28	:125	&Z
+"J	IeEA	?	312	52	:126	&[
+"K	L8f/	?	312	64	4	"N	"Q	7	9	:127	&\
+"L	IeEA	?	312	28	:129	&^
+"M	IeEA	?	312	52	:130	&_
+"N	L8f/	?	312	64	1	6	:131	&`
+"O	IeEA	?	312	28	:133	&b
+"P	IeEA	?	312	52	:134	&c
+"Q	L8f/	?	312	64	2	"T	5	:135	&d
+"R	IeEA	?	312	28	:137	&f
+"S	IeEA	?	312	52	:138	&g
+"T	L8f/	?	312	64	2	"W	4	:139	&h
+"U	IeEA	?	312	28	:141	&j
+"V	IeEA	?	312	52	:142	&k
+"W	L8f/	?	312	64	2	"Z	3	:143	&l
+"X	IeEA	?	312	28	:145	&n
+"Y	IeEA	?	312	52	:146	&o
+"Z	L8f/	?	312	64	1	2	:147	&p
+"[	IeEA	?	312	28	:149	&r
+"\	IeEA	?	312	52	:150	&s
+"]	IeEA	?	312	64	:151	&t
+"^	IeEA	?	312	28	:153	&v
+"_	IeEA	?	312	52	:154	&w
+"`	IeEA	?	312	64	:155	&x
+"a	IeEA	?	312	28	:157	&z
+"b	IeEA	?	312	52	:158	&{
+"c	IeEA	?	312	64	:159	&|
+"d	IeEA	?	315	26	:161	&~
+"e	IeEA	?	315	37	:162	'!
+"f	IeEA	?	316	45	:163	'"
+"g	IeEA	?	316	45	:164	'#
+"h	IeEA	?	316	45	:165	'$
+"i	IeEA	?	316	45	:166	'%
+"j	IeEA	?	316	45	:167	'&
+"k	IeEA	?	316	45	:168	''
+"l	IeEA	?	316	45	:169	'(
+"m	IeEA	?	316	45	:170	')
+"n	IeEA	?	316	45	:171	'*
+"o	IeEA	?	316	45	:172	'+
+"p	IeEA	?	316	45	:173	',
+"q	IeEA	?	316	45	:174	'-
+"r	IeEA	?	316	45	:175	'.
+"s	IeEA	?	316	45	:176	'/
+"t	IeEA	?	316	45	:177	'0
+"u	IeEA	?	316	67	:178	'1
+"v	IeEA	?	316	67	:179	'2
+"w	IeEA	?	316	67	:180	'3
+"x	IeEA	?	316	67	:181	'4
+"y	IeEA	?	316	67	:182	'5
+"z	IeEA	?	316	67	:183	'6
+"{	IeEA	?	316	67	:184	'7
+"|	IeEA	?	316	67	:185	'8
+"}	IeEA	?	316	67	:186	'9
+"~	IeEA	?	316	67	:187	':
+#!	IeEA	?	316	67	:188	';
+#"	IeEA	?	316	67	:189	'<
+##	IeEA	?	316	67	:190	'=
+#$	IeEA	?	316	67	:191	'>
+#%	IeEA	?	316	67	:192	'?
+#&	IeEA	?	308	28	:96	&=
+#'	IeEA	?	308	52	:97	&>
+#(	IeEA	?	308	40	:98	&?
+#)	IeEA	?	309	18	:99	&@
+#*	IeEA	?	308	64	pcarry0	&A
+#+	IeEA	?	312	40	pcarry1	&E
+#,	IeEA	?	312	40	pcarry10	&i
+#-	IeEA	?	312	40	pcarry11	&m
+#.	IeEA	?	312	40	pcarry12	&q
+#/	IeEA	?	312	40	pcarry13	&u
+#0	IeEA	?	312	40	pcarry14	&y
+#1	IeEA	?	312	40	pcarry15	&}
+#2	IeEA	?	312	40	pcarry2	&I
+#3	IeEA	?	312	40	pcarry3	&M
+#4	IeEA	?	312	40	pcarry4	&Q
+#5	IeEA	?	312	40	pcarry5	&U
+#6	IeEA	?	312	40	pcarry6	&Y
+#7	IeEA	?	312	40	pcarry7	&]
+#8	IeEA	?	312	40	pcarry8	&a
+#9	IeEA	?	312	40	pcarry9	&e
+#:	IeEA	.	322	13	cin_node	%I

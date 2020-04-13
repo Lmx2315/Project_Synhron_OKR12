@@ -1,0 +1,204 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.13.0.0
+Copyright (C) 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Dmitry Shvedov, NASA, LIC=HN0UH-WCTM4-HJL6M-X43B5-K5DI2-B0TL3
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Standard  Version: 5.13.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 1 (build 106)
+Assembler:       Armasm.exe V5.05 update 1 (build 106)
+Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
+Library Manager: ArmAr.exe V5.05 update 1 (build 106)
+Hex Converter:   FromElf.exe V5.05 update 1 (build 106)
+CPU DLL:         SARMCM3.DLL V5.13.0.0
+Dialog DLL:      DARMCM1.DLL V1.12.0.0
+Target DLL:      UL2CM3.DLL V1.154.12.0
+Dialog DLL:      TARMCM1.DLL V1.9.0.0
+ 
+<h2>Project:</h2>
+C:\SOFT_project\Mk\Project_Synhron_OKR12\Prog_1986VE1T\Sinhron_OKR12\sinhron_okr12\Ethernet\UDP\UDPCANUART.uvprojx
+Project File Date:  06/09/2015
+
+<h2>Output:</h2>
+Rebuild target 'Управляющая программа'
+compiling Application.c...
+src\Application.c(1430): warning:  #223-D: function "strlen" declared implicitly
+       for (i = 0, j = strlen(s)-1; i<j; i++, j--) {
+src\Application.c(1591): warning:  #223-D: function "sendT2" declared implicitly
+         sendT2(s);     //uart2
+src\Application.c(1587): warning:  #177-D: variable "l" was declared but never referenced
+         unsigned  short l=0;
+src\Application.c(1588): warning:  #177-D: variable "i" was declared but never referenced
+         unsigned  short i=0;
+src\Application.c(1604): warning:  #223-D: function "sendT2" declared implicitly
+         sendT2(s);     //uart2
+src\Application.c(1601): warning:  #177-D: variable "l" was declared but never referenced
+         unsigned  short l=0;
+src\Application.c(1602): warning:  #177-D: variable "i" was declared but never referenced
+         unsigned  short i=0;
+src\Application.c(1616): warning:  #223-D: function "zputs2" declared implicitly
+            zputs2(s,a);
+src\Application.c(1612): warning:  #177-D: variable "l" was declared but never referenced
+       unsigned  short l;
+src\Application.c(1613): warning:  #177-D: variable "i" was declared but never referenced
+       unsigned  short i;
+src\Application.c(1624): warning:  #940-D: missing return statement at end of non-void function "SPITxInProgress"
+  }
+src\Application.c(1628): warning:  #940-D: missing return statement at end of non-void function "SPITxFull"
+  }
+src\Application.c(1632): warning:  #940-D: missing return statement at end of non-void function "SPIRxReady"
+  }
+src\Application.c(1642): warning:  #940-D: missing return statement at end of non-void function "SPIGet"
+  }
+src\Application.c(1668): warning:  #177-D: variable "crc" was declared but never referenced
+   unsigned char crc,a;
+src\Application.c(1668): warning:  #177-D: variable "a" was declared but never referenced
+   unsigned char crc,a;
+src\Application.c(1689): warning:  #940-D: missing return statement at end of non-void function "SPI"
+  }
+src\Application.c(1811): warning:  #223-D: function "strcmp" declared implicitly
+              if (strcmp(Word,"help")==0)                     
+src\Application.c(1816): warning:  #223-D: function "Menu1" declared implicitly
+                 Menu1 ();
+src\Application.c(1840): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                                            crc_comp=atoi(DATA_Word);
+src\Application.c(1846): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                                            crc_comp=atoi(DATA_Word);
+src\Application.c(1863): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                                    crc_comp =atoi(DATA_Word);
+src\Application.c(1864): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                                    crc_input=atoi(DATA_Word2);  
+src\Application.c(1875): warning:  #223-D: function "sprintf" declared implicitly
+                                                                                                sprintf(strng,"%u",crc_comp);
+src\Application.c(1876): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                                                                                                Transf(strng);
+src\Application.c(1914): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                                        crc_comp =atoi(DATA_Word);
+src\Application.c(1915): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                                        crc_input=atoi(DATA_Word2);  
+src\Application.c(1921): warning:  #223-D: function "sprintf" declared implicitly
+                                                    sprintf(strng,"%u",crc_comp);
+src\Application.c(1922): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                                                    Transf(strng);
+src\Application.c(1946): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                                crc_comp =atoi(DATA_Word);
+src\Application.c(1947): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                                crc_input=atoi(DATA_Word2);  
+src\Application.c(1953): warning:  #223-D: function "sprintf" declared implicitly
+                                              sprintf(strng,"%u",crc_comp);
+src\Application.c(1954): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                                              Transf(strng);
+src\Application.c(1975): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+            ZTransf (InOut,index1);
+src\Application.c(1697): warning:  #177-D: variable "s" was declared but never referenced
+   unsigned char s[6];   
+src\Application.c(1701): warning:  #177-D: variable "z_k611" was declared but never referenced
+    unsigned char  z_k611=0;
+src\Application.c(1702): warning:  #177-D: variable "sys_char" was declared but never referenced
+    char sys_char=0;
+src\Application.c(1703): warning:  #177-D: variable "l" was declared but never referenced
+    int l=0;
+src\Application.c(2089): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                 getStr(sr,&lsr);
+src\Application.c(2093): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                    IO(sr);
+src\Application.c(2103): warning:  #177-D: variable "stat" was declared but never referenced
+        unsigned stat;
+src\Application.c(2105): warning:  #177-D: variable "value" was declared but never referenced
+        uint32_t value;
+src\Application.c(2146): warning:  #177-D: variable "stat" was declared but never referenced
+        unsigned stat;
+src\Application.c(2148): warning:  #177-D: variable "value" was declared but never referenced
+        uint32_t value;
+src\Application.c(2190): warning:  #177-D: variable "Size" was declared but never referenced
+        uint16_t Size[2];
+src\Application.c(2191): warning:  #177-D: variable "Buf" was declared but never referenced
+        void* Buf;
+src\Application.c(2213): warning:  #177-D: variable "SendMe" was declared but never referenced
+      uint16_t SendMe, i;
+src\Application.c(2213): warning:  #177-D: variable "i" was declared but never referenced
+      uint16_t SendMe, i;
+src\Application.c(2214): warning:  #177-D: variable "counter" was declared but never referenced
+        uint32_t counter;
+src\Application.c(2276): warning:  #223-D: function "UART1Config" declared implicitly
+         UART1Config ();
+src\Application.c(2277): warning:  #223-D: function "UART2Config" declared implicitly
+         UART2Config ();
+src\Application.c(2283): warning:  #223-D: function "PORTEConfig" declared implicitly
+           PORTEConfig ();
+src\Application.c(2302): warning:  #223-D: function "Menu1" declared implicitly
+        Menu1();
+src\Application.c(2265): warning:  #177-D: variable "f" was declared but never referenced
+        int f=0;
+src\Application.c(2267): warning:  #177-D: variable "letter" was declared but never referenced
+        unsigned char letter[14]="Hello World!\r\n";
+src\Application.c: 55 warnings, 0 errors
+assembling Startup.s...
+compiling CAN1.c...
+compiling PORTA.c...
+compiling PORTB.c...
+compiling ETHERNET.c...
+src\1986VE1T\ETHERNET\ETHERNET.c(515): warning:  #767-D: conversion from pointer to smaller integer
+        if((uint16_t)dst>0x1FFC)        dst=(uint32_t*)0x38001000;
+src\1986VE1T\ETHERNET\ETHERNET.c(533): warning:  #767-D: conversion from pointer to smaller integer
+        if((uint16_t)dst>0x1FFC)        dst=(uint32_t*)0x38001000;
+src\1986VE1T\ETHERNET\ETHERNET.c(536): warning:  #767-D: conversion from pointer to smaller integer
+        if((uint16_t)dst>0x1FFC)        dst=(uint32_t*)0x38001000;
+src\1986VE1T\ETHERNET\ETHERNET.c(538): warning:  #767-D: conversion from pointer to smaller integer
+        ETHERNET->X_Tail=(uint16_t)dst;
+src\1986VE1T\ETHERNET\ETHERNET.c(601): warning:  #767-D: conversion from pointer to smaller integer
+        if((uint16_t)src>0xFFF) src=(uint32_t*)0x38000000;
+src\1986VE1T\ETHERNET\ETHERNET.c(603): warning:  #767-D: conversion from pointer to smaller integer
+        ETHERNET->R_Head=(uint16_t)src;
+src\1986VE1T\ETHERNET\ETHERNET.c(544): warning:  #550-D: variable "space_start" was set but never used
+        uint16_t space_start=0,space_end=0,tail,head;
+src\1986VE1T\ETHERNET\ETHERNET.c(635): warning:  #767-D: conversion from pointer to smaller integer
+        if((uint16_t)src>0xFFF) src=(uint32_t*)0x38000000;
+src\1986VE1T\ETHERNET\ETHERNET.c(652): warning:  #767-D: conversion from pointer to smaller integer
+        if((uint16_t)src>0xFFF) src=(uint32_t*)0x38000000;
+src\1986VE1T\ETHERNET\ETHERNET.c(654): warning:  #767-D: conversion from pointer to smaller integer
+        ETHERNET->R_Head=(uint16_t)src;
+src\1986VE1T\ETHERNET\ETHERNET.c(611): warning:  #550-D: variable "space_start" was set but never used
+        uint16_t space_start=0,space_end=0,tail,head;
+src\1986VE1T\ETHERNET\ETHERNET.c: 11 warnings, 0 errors
+compiling PORTC.c...
+compiling PORTD.c...
+compiling PORTE.c...
+compiling PORTF.c...
+compiling RST_CLK.c...
+compiling UART1.c...
+compiling UART2.c...
+src\1986VE1T\UART2\UART2.c(174): warning:  #223-D: function "leng" declared implicitly
+         zputs2(s,leng(s));
+src\1986VE1T\UART2\UART2.c: 1 warning, 0 errors
+compiling TERMINAL.c...
+src\1986VE1T\TERMINAL\TERMINAL.c(24): warning:  #223-D: function "Transf" declared implicitly
+        for (i=0; i<20; i++) Transf ("-");  // вывод приветствия
+src\1986VE1T\TERMINAL\TERMINAL.c: 1 warning, 0 errors
+compiling ARP.c...
+compiling ICMP.c...
+compiling IP.c...
+src\TCPIP\IP\IP.c(73): warning:  #177-D: variable "tmpPackSize" was declared but never referenced
+        uint16_t tmpPackSize = htons ( IPOutPacketSize);
+src\TCPIP\IP\IP.c: 1 warning, 0 errors
+compiling UDP.c...
+compiling MAC.c...
+compiling MemAPI.c...
+linking...
+Program Size: Code=14244 RO-data=500 RW-data=868 ZI-data=16244  
+FromELF: creating hex file...
+".\obj\UDPCANUART.axf" - 0 Error(s), 69 Warning(s).
+
+<h2>Collection of Component include folders:</h2>
+  C:\SOFT_project\Mk\Project_Synhron_OKR12\Prog_1986VE1T\Sinhron_OKR12\sinhron_okr12\Ethernet\UDP\RTE
+  C:\Keil_v5\ARM\PACK\Keil\MDR1986BExx\1.4\Libraries\CMSIS\CM1\DeviceSupport\MDR1986VE1T\inc
+
+<h2>Collection of Component Files used:</h2>
+</pre>
+</body>
+</html>

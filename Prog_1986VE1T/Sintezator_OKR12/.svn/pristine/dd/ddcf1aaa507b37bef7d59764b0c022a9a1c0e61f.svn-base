@@ -1,0 +1,114 @@
+Dependencies for Project 'UDPCANUART', Target 'Target 1': (DO NOT MODIFY !)
+F (.\src\Application.c)(0x547482CB)(-c --cpu Cortex-M1 -D__EVAL -g -O0 --apcs=interwork -I.\inc-I "C:\Исходники\Плата согласования интерфейсов\RTE"-I C:\Keil_v5\ARM\PACK\Keil\MDR1986BExx\1.4\Libraries\CMSIS\CM1\DeviceSupport\MDR1986VE1T\inc-I C:\Keil_v5\ARM\CMSIS\Include-DUSE_MDR1986VE1T-o .\obj\application.o --omf_browse .\obj\application.crf --depend .\obj\application.d)
+F (.\src\ARPProtocol.c)(0x54785F2D)(-c --cpu Cortex-M1 -D__EVAL -g -O0 --apcs=interwork -I.\inc-I "C:\Исходники\Плата согласования интерфейсов\RTE"-I C:\Keil_v5\ARM\PACK\Keil\MDR1986BExx\1.4\Libraries\CMSIS\CM1\DeviceSupport\MDR1986VE1T\inc-I C:\Keil_v5\ARM\CMSIS\Include-DUSE_MDR1986VE1T-o .\obj\arpprotocol.o --omf_browse .\obj\arpprotocol.crf --depend .\obj\arpprotocol.d)
+I (src\EthernetProtocol.h)(0x5474889F)
+I (src\ARPProtocol.h)(0x5475D792)
+I (.\inc\opora.h)(0x4EBA3B6A)
+I (.\inc\core_cm1.h)(0x4E521C74)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5419E3CA)
+I (.\inc\opora_can_defs.h)(0x4C7F94BC)
+I (.\inc\opora_usb_defs.h)(0x4C7F94BC)
+I (.\inc\opora_eeprom_defs.h)(0x4C7F94BC)
+I (.\inc\opora_rst_clk_defs.h)(0x4D4814E2)
+I (.\inc\opora_dma_defs.h)(0x4C7F94BC)
+I (.\inc\opora_uart_defs.h)(0x4C7F94BC)
+I (.\inc\opora_spi_defs.h)(0x4C7F94BC)
+I (.\inc\opora_mil_std_1553_defs.h)(0x4C7F94BC)
+I (.\inc\opora_power_defs.h)(0x4C7F94BC)
+I (.\inc\opora_wwdg_defs.h)(0x4C7F94BC)
+I (.\inc\opora_iwdg_defs.h)(0x4C7F94BC)
+I (.\inc\opora_timer_defs.h)(0x4C7F94BC)
+I (.\inc\opora_adc_defs.h)(0x4C7F94BC)
+I (.\inc\opora_dac_defs.h)(0x4C7F94BC)
+I (.\inc\opora_port_defs.h)(0x4EA9462C)
+I (.\inc\opora_arinc429r_defs.h)(0x4FDA065C)
+I (.\inc\opora_bkp_defs.h)(0x4C7F94BC)
+I (.\inc\opora_arinc429t_defs.h)(0x4FDA067A)
+I (.\inc\opora_ext_bus_cntrl_defs.h)(0x4FEAFC46)
+I (.\inc\opora_ethernet_defs.h)(0x4EC52374)
+I (.\inc\opora_sys_defs.h)(0x4C7F94BC)
+F (.\src\CANDriver.c)(0x5475945A)(-c --cpu Cortex-M1 -D__EVAL -g -O0 --apcs=interwork -I.\inc-I "C:\Исходники\Плата согласования интерфейсов\RTE"-I C:\Keil_v5\ARM\PACK\Keil\MDR1986BExx\1.4\Libraries\CMSIS\CM1\DeviceSupport\MDR1986VE1T\inc-I C:\Keil_v5\ARM\CMSIS\Include-DUSE_MDR1986VE1T-o .\obj\candriver.o --omf_browse .\obj\candriver.crf --depend .\obj\candriver.d)
+F (.\src\ClockDriver.c)(0x54759401)(-c --cpu Cortex-M1 -D__EVAL -g -O0 --apcs=interwork -I.\inc-I "C:\Исходники\Плата согласования интерфейсов\RTE"-I C:\Keil_v5\ARM\PACK\Keil\MDR1986BExx\1.4\Libraries\CMSIS\CM1\DeviceSupport\MDR1986VE1T\inc-I C:\Keil_v5\ARM\CMSIS\Include-DUSE_MDR1986VE1T-o .\obj\clockdriver.o --omf_browse .\obj\clockdriver.crf --depend .\obj\clockdriver.d)
+F (.\src\EthernetDriver.c)(0x54786375)(-c --cpu Cortex-M1 -D__EVAL -g -O0 --apcs=interwork -I.\inc-I "C:\Исходники\Плата согласования интерфейсов\RTE"-I C:\Keil_v5\ARM\PACK\Keil\MDR1986BExx\1.4\Libraries\CMSIS\CM1\DeviceSupport\MDR1986VE1T\inc-I C:\Keil_v5\ARM\CMSIS\Include-DUSE_MDR1986VE1T-o .\obj\ethernetdriver.o --omf_browse .\obj\ethernetdriver.crf --depend .\obj\ethernetdriver.d)
+I (.\inc\opora.h)(0x4EBA3B6A)
+I (.\inc\core_cm1.h)(0x4E521C74)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5419E3CA)
+I (.\inc\opora_can_defs.h)(0x4C7F94BC)
+I (.\inc\opora_usb_defs.h)(0x4C7F94BC)
+I (.\inc\opora_eeprom_defs.h)(0x4C7F94BC)
+I (.\inc\opora_rst_clk_defs.h)(0x4D4814E2)
+I (.\inc\opora_dma_defs.h)(0x4C7F94BC)
+I (.\inc\opora_uart_defs.h)(0x4C7F94BC)
+I (.\inc\opora_spi_defs.h)(0x4C7F94BC)
+I (.\inc\opora_mil_std_1553_defs.h)(0x4C7F94BC)
+I (.\inc\opora_power_defs.h)(0x4C7F94BC)
+I (.\inc\opora_wwdg_defs.h)(0x4C7F94BC)
+I (.\inc\opora_iwdg_defs.h)(0x4C7F94BC)
+I (.\inc\opora_timer_defs.h)(0x4C7F94BC)
+I (.\inc\opora_adc_defs.h)(0x4C7F94BC)
+I (.\inc\opora_dac_defs.h)(0x4C7F94BC)
+I (.\inc\opora_port_defs.h)(0x4EA9462C)
+I (.\inc\opora_arinc429r_defs.h)(0x4FDA065C)
+I (.\inc\opora_bkp_defs.h)(0x4C7F94BC)
+I (.\inc\opora_arinc429t_defs.h)(0x4FDA067A)
+I (.\inc\opora_ext_bus_cntrl_defs.h)(0x4FEAFC46)
+I (.\inc\opora_ethernet_defs.h)(0x4EC52374)
+I (.\inc\opora_sys_defs.h)(0x4C7F94BC)
+I (src\EthernetDriver.h)(0x54785F69)
+I (.\inc\config.h)(0x51AC62DC)
+I (src\1. Options of EthernetDriver.c)(0x54786375)
+F (.\src\EthernetProtocol.c)(0x54785F2D)(-c --cpu Cortex-M1 -D__EVAL -g -O0 --apcs=interwork -I.\inc-I "C:\Исходники\Плата согласования интерфейсов\RTE"-I C:\Keil_v5\ARM\PACK\Keil\MDR1986BExx\1.4\Libraries\CMSIS\CM1\DeviceSupport\MDR1986VE1T\inc-I C:\Keil_v5\ARM\CMSIS\Include-DUSE_MDR1986VE1T-o .\obj\ethernetprotocol.o --omf_browse .\obj\ethernetprotocol.crf --depend .\obj\ethernetprotocol.d)
+I (.\inc\opora.h)(0x4EBA3B6A)
+I (.\inc\core_cm1.h)(0x4E521C74)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5419E3CA)
+I (.\inc\opora_can_defs.h)(0x4C7F94BC)
+I (.\inc\opora_usb_defs.h)(0x4C7F94BC)
+I (.\inc\opora_eeprom_defs.h)(0x4C7F94BC)
+I (.\inc\opora_rst_clk_defs.h)(0x4D4814E2)
+I (.\inc\opora_dma_defs.h)(0x4C7F94BC)
+I (.\inc\opora_uart_defs.h)(0x4C7F94BC)
+I (.\inc\opora_spi_defs.h)(0x4C7F94BC)
+I (.\inc\opora_mil_std_1553_defs.h)(0x4C7F94BC)
+I (.\inc\opora_power_defs.h)(0x4C7F94BC)
+I (.\inc\opora_wwdg_defs.h)(0x4C7F94BC)
+I (.\inc\opora_iwdg_defs.h)(0x4C7F94BC)
+I (.\inc\opora_timer_defs.h)(0x4C7F94BC)
+I (.\inc\opora_adc_defs.h)(0x4C7F94BC)
+I (.\inc\opora_dac_defs.h)(0x4C7F94BC)
+I (.\inc\opora_port_defs.h)(0x4EA9462C)
+I (.\inc\opora_arinc429r_defs.h)(0x4FDA065C)
+I (.\inc\opora_bkp_defs.h)(0x4C7F94BC)
+I (.\inc\opora_arinc429t_defs.h)(0x4FDA067A)
+I (.\inc\opora_ext_bus_cntrl_defs.h)(0x4FEAFC46)
+I (.\inc\opora_ethernet_defs.h)(0x4EC52374)
+I (.\inc\opora_sys_defs.h)(0x4C7F94BC)
+I (src\EthernetProtocol.h)(0x5474889F)
+F (.\src\ICMPProtocol.c)(0x54748310)(-c --cpu Cortex-M1 -D__EVAL -g -O0 --apcs=interwork -I.\inc-I "C:\Исходники\Плата согласования интерфейсов\RTE"-I C:\Keil_v5\ARM\PACK\Keil\MDR1986BExx\1.4\Libraries\CMSIS\CM1\DeviceSupport\MDR1986VE1T\inc-I C:\Keil_v5\ARM\CMSIS\Include-DUSE_MDR1986VE1T-o .\obj\icmpprotocol.o --omf_browse .\obj\icmpprotocol.crf --depend .\obj\icmpprotocol.d)
+F (.\src\IPProtocol.c)(0x5475AB3B)(-c --cpu Cortex-M1 -D__EVAL -g -O0 --apcs=interwork -I.\inc-I "C:\Исходники\Плата согласования интерфейсов\RTE"-I C:\Keil_v5\ARM\PACK\Keil\MDR1986BExx\1.4\Libraries\CMSIS\CM1\DeviceSupport\MDR1986VE1T\inc-I C:\Keil_v5\ARM\CMSIS\Include-DUSE_MDR1986VE1T-o .\obj\ipprotocol.o --omf_browse .\obj\ipprotocol.crf --depend .\obj\ipprotocol.d)
+I (.\inc\opora.h)(0x4EBA3B6A)
+I (.\inc\core_cm1.h)(0x4E521C74)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5419E3CA)
+I (.\inc\opora_can_defs.h)(0x4C7F94BC)
+I (.\inc\opora_usb_defs.h)(0x4C7F94BC)
+I (.\inc\opora_eeprom_defs.h)(0x4C7F94BC)
+I (.\inc\opora_rst_clk_defs.h)(0x4D4814E2)
+I (.\inc\opora_dma_defs.h)(0x4C7F94BC)
+I (.\inc\opora_uart_defs.h)(0x4C7F94BC)
+I (.\inc\opora_spi_defs.h)(0x4C7F94BC)
+I (.\inc\opora_mil_std_1553_defs.h)(0x4C7F94BC)
+I (.\inc\opora_power_defs.h)(0x4C7F94BC)
+I (.\inc\opora_wwdg_defs.h)(0x4C7F94BC)
+I (.\inc\opora_iwdg_defs.h)(0x4C7F94BC)
+I (.\inc\opora_timer_defs.h)(0x4C7F94BC)
+I (.\inc\opora_adc_defs.h)(0x4C7F94BC)
+I (.\inc\opora_dac_defs.h)(0x4C7F94BC)
+I (.\inc\opora_port_defs.h)(0x4EA9462C)
+I (.\inc\opora_arinc429r_defs.h)(0x4FDA065C)
+I (.\inc\opora_bkp_defs.h)(0x4C7F94BC)
+I (.\inc\opora_arinc429t_defs.h)(0x4FDA067A)
+I (.\inc\opora_ext_bus_cntrl_defs.h)(0x4FEAFC46)
+I (.\inc\opora_ethernet_defs.h)(0x4EC52374)
+I (.\inc\opora_sys_defs.h)(0x4C7F94BC)
+F (.\src\PORTDDriver.c)(0x54759422)(-c --cpu Cortex-M1 -D__EVAL -g -O0 --apcs=interwork -I.\inc-I "C:\Исходники\Плата согласования интерфейсов\RTE"-I C:\Keil_v5\ARM\PACK\Keil\MDR1986BExx\1.4\Libraries\CMSIS\CM1\DeviceSupport\MDR1986VE1T\inc-I C:\Keil_v5\ARM\CMSIS\Include-DUSE_MDR1986VE1T-o .\obj\portddriver.o --omf_browse .\obj\portddriver.crf --depend .\obj\portddriver.d)
+F (.\src\UDPProtocol.c)(0x5475DBAA)(-c --cpu Cortex-M1 -D__EVAL -g -O0 --apcs=interwork -I.\inc-I "C:\Исходники\Плата согласования интерфейсов\RTE"-I C:\Keil_v5\ARM\PACK\Keil\MDR1986BExx\1.4\Libraries\CMSIS\CM1\DeviceSupport\MDR1986VE1T\inc-I C:\Keil_v5\ARM\CMSIS\Include-DUSE_MDR1986VE1T-o .\obj\udpprotocol.o --omf_browse .\obj\udpprotocol.crf --depend .\obj\udpprotocol.d)
+F (.\config.c)(0x5478623E)(-c --cpu Cortex-M1 -D__EVAL -g -O0 --apcs=interwork -I.\inc-I "C:\Исходники\Плата согласования интерфейсов\RTE"-I C:\Keil_v5\ARM\PACK\Keil\MDR1986BExx\1.4\Libraries\CMSIS\CM1\DeviceSupport\MDR1986VE1T\inc-I C:\Keil_v5\ARM\CMSIS\Include-DUSE_MDR1986VE1T-o .\obj\config.o --omf_browse .\obj\config.crf --depend .\obj\config.d)

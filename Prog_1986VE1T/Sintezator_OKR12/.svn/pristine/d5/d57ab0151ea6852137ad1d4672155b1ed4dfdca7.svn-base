@@ -1,0 +1,740 @@
+
+#include "opora.h"
+#include "DDS1508pl1t.h"
+#include "TERMINAL.h"
+
+//#define dds_data PORTA->RXTX; //устанавливаем  данные
+
+
+reg_1508pl1t reg_DDS={      0x1000,//Управление синтезом ЛЧМ.
+                            0x1002,//Управление временем переключения параметров синтеза.
+
+                            0x00E1,//Управление синтезом ЛЧМ.
+                            0x00E2,//Управление временем переключения параметров синтеза.
+
+                            0x0007,//Управление потоком данных и рандомизацией
+
+                            0x0008,//Делитель чиповой скорости, биты [15: 0]
+ 							0x0009,//Делитель чиповой скорости, биты [31:16]
+
+                            0x1010, //Регистр длительности 1-ой фазы ЛЧМ-сигнала [15:0]
+                            0x1011, //Регистр длительности 1-ой фазы ЛЧМ-сигнала [31:16]
+                            0x1012, //Регистр длительности 1-ой фазы ЛЧМ-сигнала [45:32]
+
+                            0x1014, //Регистр длительности 2-ой фазы ЛЧМ-сигнала [15:0]
+                            0x1015, //Регистр длительности 2-ой фазы ЛЧМ-сигнала [31:16]
+                            0x1016, //Регистр длительности 2-ой фазы ЛЧМ-сигнала [45:32]
+
+                            0x1018, //Регистр длительности 3-ой фазы ЛЧМ-сигнала [15:0]
+                            0x1019, //Регистр длительности 3-ой фазы ЛЧМ-сигнала [31:16]
+                            0x101A, //Регистр длительности 3-ой фазы ЛЧМ-сигнала [45:32]
+
+                            0x101C,//Регистр длительности 4-ой фазы ЛЧМ-сигнала [15:0]
+                            0x101D,//Регистр длительности 4-ой фазы ЛЧМ-сигнала [31:16]
+                            0x101E,//Регистр длительности 4-ой фазы ЛЧМ-сигнала [45:32]
+
+                            0x1020,//Регистр начальной частоты ЛЧМ 1 [15:0]
+                            0x1021,//Регистр начальной частоты ЛЧМ 1 [31:16]
+                            0x1022,//Регистр начальной частоты ЛЧМ 1 [47:32]
+
+                            0x1024,//Регистр начальной частоты ЛЧМ 2 [15:0]
+                            0x1025,//Регистр начальной частоты ЛЧМ 2 [31:16]
+                            0x1026,//Регистр начальной частоты ЛЧМ 2 [47:32]
+
+                            0x1030,//Регистр начальной фазы ЛЧМ 1
+                            0x1031,//Регистр начальной фазы ЛЧМ 2
+
+                            0x1040, //Регистр приращения частоты 1 [15: 0]
+                            0x1041, //Регистр приращения частоты 1 [31:16]
+                            0x1042, //Регистр приращения частоты 1 [47:32]
+
+                            0x1044, //Регистр приращения частоты 2 [15: 0]
+                            0x1045, //Регистр приращения частоты 2 [31:16]
+                            0x1046, //Регистр приращения частоты 2 [47:32]
+
+                            0x1300,//Запись приращения фазы [15:0] во все профили
+                            0x1301,//Запись приращения фазы [31:16] во все профили
+                            0x1302,//Запись приращения фазы [47:32] во все профили
+
+                            0x1304, //Запись смещения фазы во все профили
+                            0x1305, //Запись коэффициента усиления во все профили
+
+                            0x1306,//Запись постоянного смещения во все профили
+
+                            0x1400, //Регистр приращения фазы [15: 0], профиль 0
+                            0x1401, //Регистр приращения фазы [31:16], профиль 0
+                            0x1402, //Регистр приращения фазы [47:32], профиль 0
+
+                            0x1404, //Регистр управления фазой, профиль 0
+                            0x1405, //Регистр управления амплитудой, профиль 0
+
+                            0x1406, //Регистр упр. смещением выходного сигнала, профиль 0
+
+                            0x0005, //Очистка аккумуляторов фазы, запуск и остановка ЛЧМ
+                            0x0004, //Управление синхронизацией
+                            0x0003, //Регистр управления
+                            0x0002, //Выбор активного профиля синтеза
+                            0x0001, //Идентификатор устройства, только чтение
+                            0x0000  //Регистр программного сброса
+
+                          }; 
+
+
+
+unsigned int delay_us(unsigned int a) //функция задержки
+{
+	unsigned int t,l;
+	unsigned int k;
+
+	k=1*a;
+
+	for (t=0;t<k;t++) l=l+1;
+
+		return l;
+}
+
+
+void Write_DDS(unsigned short data, unsigned short port_adr,ShiftReg *pins)
+{
+	//запись адреса
+
+	delay_us(1);
+
+	pins->rdn->RXTX|=(1<<(pins->rdn_DDS)); //устанавливаем еденицу на сигнал rdn
+
+	delay_us(1);
+
+	pins->port_data->OE=0xffff; //переводим порт на выход
+  
+    delay_us(1);
+    
+    pins->adr->RXTX&=~(1<<(pins->pin_adr)); //устанавливаем ноль на сигнал adr, Сигал ADR выбирает доступ к адресному регистру (ADR=0), либо к данным (ADR=1).
+    
+    delay_us(1);	
+	
+	pins->csn->RXTX&=~(1<<(pins->csn_DDS)); //устанавливаем ноль на сигнал csn
+    
+    delay_us(1);	
+	
+	pins->port_data->RXTX=port_adr; //устанавливаем значение адреса на шину данных
+	
+	delay_us(1);
+
+    pins->wrn->RXTX&=~(1<<(pins->wrn_DDS)); //устанавливаем ноль на сигнал wrn
+
+	delay_us(1);
+
+	pins->wrn->RXTX|=(1<<(pins->wrn_DDS)); //устанавливаем еденицу на сигнал wrn
+
+	delay_us(1);
+
+	pins->csn->RXTX|=(1<<(pins->csn_DDS)); //устанавливаем еденицу на сигнал csn
+
+	delay_us(1);
+
+	//запись данных по установленному ранее адресу
+    
+    pins->adr->RXTX|=(1<<(pins->pin_adr)); //устанавливаем еденицу на сигнал adr, Сигал ADR выбирает доступ к адресному регистру (ADR=0), либо к данным (ADR=1).
+	
+	delay_us(1);
+
+	pins->csn->RXTX&=~(1<<(pins->csn_DDS)); //устанавливаем ноль на сигнал csn
+
+	delay_us(1);
+    
+    pins->port_data->RXTX=data; //устанавливаем значение данных на шину данных
+   
+    delay_us(1);
+   
+    pins->wrn->RXTX&=~(1<<(pins->wrn_DDS)); //устанавливаем ноль на сигнал wrn
+  
+	delay_us(1);
+
+	pins->wrn->RXTX|=(1<<(pins->wrn_DDS)); //устанавливаем еденицу на сигнал wrn
+	
+	delay_us(1);
+	
+	pins->csn->RXTX|=(1<<(pins->csn_DDS)); //устанавливаем еденицу на сигнал csn
+
+	delay_us(1);
+
+	pins->port_data->RXTX=0xffff; //устанавливаем значение данных на шину данных
+
+}
+
+
+unsigned short Read_DDS(unsigned short port_adr,ShiftReg *pins)
+{
+
+	unsigned short a=0;
+	unsigned short b=0;
+
+	//запись адреса
+
+	pins->rdn->RXTX|=(1<<(pins->rdn_DDS)); //устанавливаем еденицу на сигнал rdn
+
+	delay_us(1);
+
+	pins->port_data->OE=0xffff; //переводим порт на выход
+    
+    pins->csn->RXTX&=~(1<<(pins->csn_DDS)); //устанавливаем ноль на сигнал csn
+	
+	delay_us(1);
+
+    pins->wrn->RXTX&=~(1<<(pins->wrn_DDS)); //устанавливаем ноль на сигнал wrn
+
+    delay_us(1);
+    
+    pins->adr->RXTX&=~(1<<(pins->pin_adr)); //устанавливаем ноль на сигнал adr, Сигал ADR выбирает доступ к адресному регистру (ADR=0), либо к данным (ADR=1).
+	
+    pins->port_data->RXTX=port_adr; //устанавливаем значение адреса на шину данных
+         
+	delay_us(1);
+    
+  	pins->wrn->RXTX|=(1<<(pins->wrn_DDS)); //устанавливаем еденицу на сигнал wrn
+
+	delay_us(1);
+
+	pins->csn->RXTX|=(1<<(pins->csn_DDS)); //устанавливаем еденицу на сигнал csn
+
+	pins->adr->RXTX|=(1<<(pins->pin_adr)); //устанавливаем еденицу на сигнал adr, Сигал ADR выбирает доступ к адресному регистру (ADR=0), либо к данным (ADR=1).
+
+	delay_us(1);
+
+	//чтение данных по установленному ранее адресу
+
+	pins->port_data->OE=0x0000; //переводим порт на вход
+    
+    delay_us(1);
+    
+    pins->adr->RXTX|=(1<<(pins->pin_adr)); //устанавливаем еденицу на сигнал adr, Сигал ADR выбирает доступ к адресному регистру (ADR=0), либо к данным (ADR=1).
+	
+	pins->csn->RXTX&=~(1<<(pins->csn_DDS)); //устанавливаем ноль на сигнал csn
+	
+	pins->rdn->RXTX&=~(1<<(pins->rdn_DDS)); //устанавливаем ноль на сигнал rdn
+	
+	delay_us(1);
+
+	pins->wrn->RXTX&=~(1<<(pins->wrn_DDS)); //устанавливаем ноль на сигнал wrn
+
+	delay_us(1);
+
+    b=pins->port_data->RXTX; //считываем значение данных с шины данных
+
+	delay_us(1);
+
+	pins->wrn->RXTX|=(1<<(pins->wrn_DDS)); //устанавливаем еденицу на сигнал wrn
+
+	delay_us(1);
+    
+	pins->rdn->RXTX|=(1<<(pins->rdn_DDS)); //устанавливаем еденицу на сигнал rdn
+	
+    delay_us(1);
+	
+	pins->csn->RXTX|=(1<<(pins->csn_DDS)); //устанавливаем еденицу на сигнал csn
+
+	delay_us(1);
+
+	return (a+b);
+
+}
+
+
+unsigned char init_reg_DDS (unsigned short data, unsigned short port_adr,ShiftReg *pins)
+{
+	unsigned char a=0;
+
+	Write_DDS(data,port_adr,pins);
+
+ if (data==Read_DDS(port_adr,pins)) a=1; else a=0; //проверка что всё хорошо
+
+ return a;
+
+}
+
+
+void init_DDS (ShiftReg *pins)
+{
+
+	unsigned char failure=0;
+   unsigned char  strng[64];
+	   
+
+     //инициализация ног DDS    
+
+	pins->RSTN->RXTX|=(1<<(pins->RSTN_DDS)); //устанавливаем еденицу на сигнал RSTN
+
+	pins->SCSN->RXTX|=(1<<(pins->SCSN_DDS)); //устанавливаем еденицу на сигнал SCSN - выбор параллельного порта
+
+	pins->wrn ->RXTX|=(1<<(pins->wrn_DDS)); //устанавливаем еденицу на сигнал wrn
+
+	pins->rdn->RXTX|=(1<<(pins->rdn_DDS)); //устанавливаем еденицу на сигнал rdn
+
+	pins->csn->RXTX|=(1<<(pins->csn_DDS)); //устанавливаем еденицу на сигнал csn
+
+	delay_us(1);
+
+	//инициализация регистров DDS
+
+    if (init_reg_DDS (0x0078,reg_DDS.SWRST,    pins)==0) failure=failure+1; 
+
+    delay_us(1000);
+
+	if (init_reg_DDS (0x1000,reg_DDS.CTR,    pins)==0) failure=failure+1; 
+	if (init_reg_DDS (0x4000,reg_DDS.SYNC,   pins)==0) failure=failure+1; 
+//	if (init_reg_DDS (0x0,reg_DDS.CLR,    pins)==0) failure=failure+1; 
+//	if (init_reg_DDS (0x0,reg_DDS.SEL_REG,pins)==0) failure=failure+1; 
+
+	if (init_reg_DDS (0x7ff8,reg_DDS.CH1_Mul0,     pins)==0) failure=failure+1; //амплитуда сигнала
+	if (init_reg_DDS (0x0000,reg_DDS.CH1_LS_CTR,   pins)==0) failure=failure+1; //Управление синтезом ЛЧМ.
+
+	if (init_reg_DDS (0x0000,reg_DDS.CH1_LS_TPH1_L,   pins)==0) failure=failure+1;  //Регистр длительности 1-ой фазы ЛЧМ-сигнала [15:0]
+	if (init_reg_DDS (0x0000,reg_DDS.CH1_LS_TPH1_M,   pins)==0) failure=failure+1; 
+	if (init_reg_DDS (0x0000,reg_DDS.CH1_LS_TPH1_H,   pins)==0) failure=failure+1; 
+
+	if (init_reg_DDS (0x0000,reg_DDS.CH1_LS_TPH2_L,   pins)==0) failure=failure+1; 
+	if (init_reg_DDS (0x0000,reg_DDS.CH1_LS_TPH2_M,   pins)==0) failure=failure+1; 
+	if (init_reg_DDS (0x0000,reg_DDS.CH1_LS_TPH2_H,   pins)==0) failure=failure+1; 
+
+	if (init_reg_DDS (0x0000,reg_DDS.CH1_LS_TPH3_L,   pins)==0) failure=failure+1; 
+	if (init_reg_DDS (0x0000,reg_DDS.CH1_LS_TPH3_M,   pins)==0) failure=failure+1; 
+	if (init_reg_DDS (0x0000,reg_DDS.CH1_LS_TPH3_H,   pins)==0) failure=failure+1; 
+
+	if (init_reg_DDS (0x0000,reg_DDS.CH1_LS_TPH4_L,   pins)==0) failure=failure+1; 
+	if (init_reg_DDS (0x0000,reg_DDS.CH1_LS_TPH4_M,   pins)==0) failure=failure+1; 
+	if (init_reg_DDS (0x0000,reg_DDS.CH1_LS_TPH4_H,   pins)==0) failure=failure+1; 
+
+
+
+    if (init_reg_DDS (0x0000,reg_DDS.CH1_LS_F1_L,   pins)==0) failure=failure+1; //Регистр начальной частоты ЛЧМ 1 [15:0]
+	if (init_reg_DDS (0x0000,reg_DDS.CH1_LS_F1_M,   pins)==0) failure=failure+1; 
+	if (init_reg_DDS (0x0000,reg_DDS.CH1_LS_F1_H,   pins)==0) failure=failure+1; 
+    
+    if (init_reg_DDS (0x0000,reg_DDS.CH1_LS_F2_L,   pins)==0) failure=failure+1; //Регистр начальной частоты ЛЧМ 2 [15:0]
+	if (init_reg_DDS (0x0000,reg_DDS.CH1_LS_F2_M,   pins)==0) failure=failure+1; 
+	if (init_reg_DDS (0x0000,reg_DDS.CH1_LS_F2_H,   pins)==0) failure=failure+1; 
+
+	if (init_reg_DDS (0x0000,reg_DDS.CH1_LS_Ph1,   pins)==0) failure=failure+1; //Регистр начальной фазы ЛЧМ 1
+	if (init_reg_DDS (0x0000,reg_DDS.CH1_LS_Ph2,   pins)==0) failure=failure+1; 
+
+    if (init_reg_DDS (0x0000,reg_DDS.CH1_LS_dF1_L,   pins)==0) failure=failure+1; //Регистр приращения частоты 1 [15: 0]
+	if (init_reg_DDS (0x0000,reg_DDS.CH1_LS_dF1_M,   pins)==0) failure=failure+1; 
+	if (init_reg_DDS (0x0000,reg_DDS.CH1_LS_dF1_H,   pins)==0) failure=failure+1; 
+
+	if (init_reg_DDS (0x0000,reg_DDS.CH1_LS_dF2_L,   pins)==0) failure=failure+1; //Регистр приращения частоты 2 [15: 0]
+	if (init_reg_DDS (0x0000,reg_DDS.CH1_LS_dF2_M,   pins)==0) failure=failure+1; 
+	if (init_reg_DDS (0x0000,reg_DDS.CH1_LS_dF2_H,   pins)==0) failure=failure+1; 
+	
+	if (init_reg_DDS (0xFFFF,reg_DDS.CH1_dPh_all_L,   pins)==0) failure=failure+1;  //Запись приращения фазы [15:0] во все профили
+	if (init_reg_DDS (0xFFFF,reg_DDS.CH1_dPh_all_M,   pins)==0) failure=failure+1; 
+	if (init_reg_DDS (0x1FFF,reg_DDS.CH1_dPh_all_H,   pins)==0) failure=failure+1; 
+
+	if (init_reg_DDS (0xFFFF,reg_DDS.CH1_dPh0_L,   pins)==0) failure=failure+1;     //Регистр приращения фазы [15: 0], профиль 0
+	if (init_reg_DDS (0xFFFF,reg_DDS.CH1_dPh0_M,   pins)==0) failure=failure+1; 
+	if (init_reg_DDS (0x2FFF,reg_DDS.CH1_dPh0_H,   pins)==0) failure=failure+1; 
+
+
+	 	Transf ("---------------\r\n" );
+        Transf ("failure:" );
+        itoa(failure,strng);
+        Transf(strng);
+        Transf("\r\n----------------");
+        Transf ("\r\n");
+
+}
+
+void reg_DDS_watch(ShiftReg *pins)
+{
+	unsigned short temp_short=0;
+	   unsigned char  strng[64];
+
+Transf ("//------------------------------\r\n" );
+
+	
+
+        Transf ("DEVID:" );
+ temp_short=Read_DDS(reg_DDS.DEVID,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf("	//Идентификатор устройства, только чтение");
+                         Transf ("\r\n");
+                         Transf ("\r\n");
+
+    Transf ("T_SEL_STATE:" );
+ temp_short=Read_DDS(reg_DDS.T_SEL_STATE,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf("	//Отладочный регистр: текущее состояние выводов SEL");
+                         Transf ("\r\n");
+
+  Transf ("T_E_SEL:" );
+ temp_short=Read_DDS(reg_DDS.T_E_SEL,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf("	//Отладочный регистр: эффективный SEL");
+                         Transf ("\r\n");
+                         Transf ("\r\n");
+
+        Transf ("CTR:" );
+ temp_short=Read_DDS(reg_DDS.CTR,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf("	//Регистр управления");
+                         Transf ("\r\n");
+
+         Transf ("SEL_REG:" );
+ temp_short=Read_DDS(reg_DDS.SEL_REG,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf("	//Выбор активного профиля синтеза");
+                         Transf ("\r\n");  
+
+
+         Transf ("SYNC:" );
+ temp_short=Read_DDS(reg_DDS.SYNC,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf("			//Управление синхронизацией");
+                         Transf ("\r\n");  
+                         Transf ("\r\n");               
+                       
+       Transf ("TC_L:" );
+ temp_short=Read_DDS(reg_DDS.TC_L,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf("			//Делитель чиповой скорости, биты [15: 0]");
+                         Transf ("\r\n");     
+                       
+       Transf ("TC_H:" );
+ temp_short=Read_DDS(reg_DDS.TC_H,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf("			//Делитель чиповой скорости, биты [31:16]");
+                         Transf ("\r\n");  
+                         Transf ("\r\n");   
+
+       Transf ("ROUTE:" );
+ temp_short=Read_DDS(reg_DDS.ROUTE,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf("			//Управление потоком данных и рандомизацией");
+                         Transf ("\r\n");  
+                         Transf ("\r\n");     
+
+
+
+
+         Transf ("CH1_Offset0:" );
+ temp_short=Read_DDS(reg_DDS.CH1_Offset0,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf("	//Регистр упр. смещением выходного сигнала, профиль 0");
+                         Transf ("\r\n"); 
+						 Transf ("\r\n");  
+
+
+         Transf ("CH1_Mul0:" );
+ temp_short=Read_DDS(reg_DDS.CH1_Mul0,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf("		//Регистр управления амплитудой, профиль 0");
+                         Transf ("\r\n");          
+                         Transf ("\r\n");       
+
+
+
+
+         Transf ("CH1_LS_CTR:" );
+ temp_short=Read_DDS(reg_DDS.CH1_LS_CTR,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf("		//Управление синтезом ЛЧМ.");
+                         Transf ("\r\n");          
+                        
+//----------------------------------------------------
+          Transf ("CH1_dPh0_L:" );
+ temp_short=Read_DDS(reg_DDS.CH1_dPh0_L,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf("	//Регистр приращения фазы [15: 0], профиль 0");
+                         Transf ("\r\n");  
+                       
+             Transf ("CH1_dPh0_M:" );
+ temp_short=Read_DDS(reg_DDS.CH1_dPh0_M,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf ("\r\n");  
+                       
+          Transf ("CH1_dPh0_H:" );
+ temp_short=Read_DDS(reg_DDS.CH1_dPh0_H,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf ("\r\n");
+                         Transf ("\r\n"); 
+//---------------------------------------------------
+           Transf ("CH1_dPh_all_L:" );
+ temp_short=Read_DDS(reg_DDS.CH1_dPh_all_L,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf("	//Запись приращения фазы [15:0] во все профили");
+                         Transf ("\r\n");  
+                       
+             Transf ("CH1_dPh_all_M:" );
+ temp_short=Read_DDS(reg_DDS.CH1_dPh_all_M,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf ("\r\n");  
+                       
+          Transf ("CH1_dPh_all_H:" );
+ temp_short=Read_DDS(reg_DDS.CH1_dPh_all_H,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf ("\r\n");
+                         Transf ("\r\n"); 
+//------------------------------------------------
+           Transf ("CH1_LS_dF1_L:" );
+ temp_short=Read_DDS(reg_DDS.CH1_LS_dF1_L,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf(" //Регистр приращения частоты 1 [15: 0]");
+                         Transf ("\r\n");  
+                       
+             Transf ("CH1_LS_dF1_M:" );
+ temp_short=Read_DDS(reg_DDS.CH1_LS_dF1_M,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf ("\r\n");  
+                       
+          Transf ("CH1_LS_dF1_H:" );
+ temp_short=Read_DDS(reg_DDS.CH1_LS_dF1_H,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf ("\r\n");
+                         Transf ("\r\n"); 
+//-----------------------------------------------
+            Transf ("CH1_LS_dF2_L:" );
+ temp_short=Read_DDS(reg_DDS.CH1_LS_dF2_L,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf("//Регистр начальной частоты ЛЧМ 2 [15:0]");
+                         Transf ("\r\n");  
+                       
+             Transf ("CH1_LS_dF2_M:" );
+ temp_short=Read_DDS(reg_DDS.CH1_LS_dF2_M,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf ("\r\n");  
+                       
+          Transf ("CH1_LS_dF2_H:" );
+ temp_short=Read_DDS(reg_DDS.CH1_LS_dF2_H,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf ("\r\n");
+                         Transf ("\r\n"); 
+//-----------------------------------------------     
+
+            Transf ("CH1_dPh_all_L:" );
+ temp_short=Read_DDS(reg_DDS.CH1_dPh_all_L,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf("//Запись приращения фазы [15:0] во все профили");
+                         Transf ("\r\n");  
+                       
+             Transf ("CH1_dPh_all_M:" );
+ temp_short=Read_DDS(reg_DDS.CH1_dPh_all_M,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf ("\r\n");  
+                       
+          Transf ("CH1_dPh_all_H:" );
+ temp_short=Read_DDS(reg_DDS.CH1_dPh_all_H,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf ("\r\n");
+                         Transf ("\r\n");                      
+//-----------------------------------------------
+
+
+            Transf ("CH1_LS_F1_L:" );
+ temp_short=Read_DDS(reg_DDS.CH1_LS_F1_L,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf("//Регистр начальной частоты ЛЧМ 1 [15:0]");
+                         Transf ("\r\n");  
+                       
+             Transf ("CH1_LS_F1_M:" );
+ temp_short=Read_DDS(reg_DDS.CH1_LS_F1_M,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf ("\r\n");  
+                       
+          Transf ("CH1_LS_F1_H:" );
+ temp_short=Read_DDS(reg_DDS.CH1_LS_F1_H,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf ("\r\n"); 
+                         Transf ("\r\n");                     
+//-----------------------------------------------
+
+
+            Transf ("CH1_LS_F2_L:" );
+ temp_short=Read_DDS(reg_DDS.CH1_LS_F2_L,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf("//Регистр начальной частоты ЛЧМ 2 [15:0]");
+                         Transf ("\r\n");  
+                       
+             Transf ("CH1_LS_F2_M:" );
+ temp_short=Read_DDS(reg_DDS.CH1_LS_F2_M,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf ("\r\n");  
+                       
+          Transf ("CH1_LS_F2_H:" );
+ temp_short=Read_DDS(reg_DDS.CH1_LS_F2_H,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf ("\r\n"); 
+                         Transf ("\r\n");                     
+//-----------------------------------------------                       
+
+            Transf ("СH1_LS_TPH1_L:" );
+ temp_short=Read_DDS(reg_DDS.CH1_LS_TPH1_L,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf("//Регистр длительности 1-ой фазы ЛЧМ-сигнала [15:0]");
+                         Transf ("\r\n");  
+                       
+             Transf ("СH1_LS_TPH1_M:" );
+ temp_short=Read_DDS(reg_DDS.CH1_LS_TPH1_M,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf ("\r\n");  
+                       
+          Transf ("СH1_LS_TPH1_H:" );
+ temp_short=Read_DDS(reg_DDS.CH1_LS_TPH1_H,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf ("\r\n"); 
+                         Transf ("\r\n");                     
+
+//----------------------------------------------
+
+
+            Transf ("СH1_LS_TPH2_L:" );
+ temp_short=Read_DDS(reg_DDS.CH1_LS_TPH2_L,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf("//Регистр длительности 2-ой фазы ЛЧМ-сигнала [15:0]");
+                         Transf ("\r\n");  
+                       
+             Transf ("СH1_LS_TPH2_M:" );
+ temp_short=Read_DDS(reg_DDS.CH1_LS_TPH2_M,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf ("\r\n");  
+                       
+          Transf ("СH1_LS_TPH2_H:" );
+ temp_short=Read_DDS(reg_DDS.CH1_LS_TPH2_H,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf ("\r\n");
+                         Transf ("\r\n");                      
+
+//----------------------------------------------
+
+
+
+
+            Transf ("СH1_LS_TPH3_L:" );
+ temp_short=Read_DDS(reg_DDS.CH1_LS_TPH3_L,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf("//Регистр длительности 3-ой фазы ЛЧМ-сигнала [15:0]");
+                         Transf ("\r\n");  
+                       
+             Transf ("СH1_LS_TPH3_M:" );
+ temp_short=Read_DDS(reg_DDS.CH1_LS_TPH3_M,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf ("\r\n");  
+                       
+          Transf ("СH1_LS_TPH3_H:" );
+ temp_short=Read_DDS(reg_DDS.CH1_LS_TPH3_H,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf ("\r\n"); 
+                         Transf ("\r\n");                     
+
+//----------------------------------------------
+
+            Transf ("СH1_LS_TPH4_L:" );
+ temp_short=Read_DDS(reg_DDS.CH1_LS_TPH4_L,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf("//Регистр длительности 4-ой фазы ЛЧМ-сигнала [15:0]");
+                         Transf ("\r\n");  
+                       
+             Transf ("СH1_LS_TPH4_M:" );
+ temp_short=Read_DDS(reg_DDS.CH1_LS_TPH4_M,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf ("\r\n");  
+                       
+          Transf ("СH1_LS_TPH4_H:" );
+ temp_short=Read_DDS(reg_DDS.CH1_LS_TPH4_H,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf ("\r\n");
+                         Transf ("\r\n");                      
+
+//----------------------------------------------
+
+                 
+             Transf ("CH1_LS_Ph1:" );
+ temp_short=Read_DDS(reg_DDS.CH1_LS_Ph1,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf("//Регистр начальной фазы ЛЧМ 1");
+                         Transf ("\r\n");  
+                       
+          Transf ("CH1_LS_Ph2:" );
+ temp_short=Read_DDS(reg_DDS.CH1_LS_Ph2,pins); 
+                itoa(temp_short,strng);
+                         Transf(strng);
+                         Transf("//Регистр начальной фазы ЛЧМ 2");
+                         Transf ("\r\n");
+                         Transf ("\r\n");                      
+
+//----------------------------------------------
+
+
+
+
+Transf ("//------------------------------\r\n" );
+
+
+}
+
+
+
+
+
+void wr_tst (unsigned short data, unsigned short port_adr,ShiftReg *pins)
+
+{
+
+	Write_DDS(data,port_adr,pins);
+
+}
+
+unsigned short rd_tst(unsigned short port_adr,ShiftReg *pins)
+
+{
+	unsigned short a;
+
+	a=Read_DDS(port_adr,pins);
+
+	return a;
+	
+}

@@ -1,0 +1,62 @@
+-- MAX+plus II Compiler Fit File      
+-- Version 10.2 07/10/2002            
+-- Compiled: 01/16/2015 11:09:59      
+
+-- Copyright (C) 1988-2002 Altera Corporation
+-- Any megafunction design, and related net list (encrypted or decrypted),
+-- support information, device programming or simulation file, and any other
+-- associated documentation or information provided by Altera or a partner
+-- under Altera's Megafunction Partnership Program may be used only to
+-- program PLD devices (but not masked PLD devices) from Altera.  Any other
+-- use of such megafunction design, net list, support information, device
+-- programming or simulation file, or any other related documentation or
+-- information is prohibited for any other purpose, including, but not
+-- limited to modification, reverse engineering, de-compiling, or use with
+-- any other silicon devices, unless such use is explicitly licensed under
+-- a separate agreement with Altera or a megafunction partner.  Title to
+-- the intellectual property, including patents, copyrights, trademarks,
+-- trade secrets, or maskworks, embodied in any such megafunction design,
+-- net list, support information, device programming or simulation file, or
+-- any other related documentation or information provided by Altera or a
+-- megafunction partner, remains with Altera, the megafunction partner, or
+-- their respective licensors.  No other licenses, including any licenses
+-- needed under any third party's intellectual property, are provided herein.
+
+CHIP "sch"
+BEGIN
+
+    DEVICE = "EPF10K30ETC144-1";
+
+    "clk"                          : INPUT_PIN  = 55     ;
+    "clk_out"                      : OUTPUT_PIN = 23     ;
+    "|lpm_add_sub:20|addcore:adder|:125" : LOCATION   = LC2_D25;
+    "|lpm_add_sub:20|addcore:adder|:133" : LOCATION   = LC5_D25;
+    ":11"                          : LOCATION   = LC7_D25;  -- a7
+    ":12"                          : LOCATION   = LC8_D25;  -- a6
+    ":13"                          : LOCATION   = LC6_D25;  -- a5
+    ":14"                          : LOCATION   = LC4_D25;  -- a4
+    ":15"                          : LOCATION   = LC3_D25;  -- a3
+    ":16"                          : LOCATION   = LC1_D25;  -- a2
+    ":17"                          : LOCATION   = LC2_D21;  -- a1
+    ":18"                          : LOCATION   = LC8_D21;  -- a0
+
+END;
+
+INTERNAL_INFO "sch"
+BEGIN
+	DEVICE = EPF10K30ETC144-1;
+    OD5P55  : LORAX = "1:FB5->LC7_D25,->LC8_D25,->LC6_D25,->LC4_D25,->LC3_D25,->LC1_D25,->LC2_D21,->LC8_D21|";
+    LC7_D25 : LORAX = "1:MSW6R3C24,G128R3->OH6R3P23|";
+    LC2_D21 : LORAX = "1:MSW1R3C20,G44R3,PA7R3C24->LC2_D25,->LC1_D25|";
+    LC8_D21 : LORAX = "1:MSW7R3C20,G100R3,PA0R3C24->LC2_D25,->LC1_D25|";
+	LC2_D25 : LORAX2 = "X, LC1_D25, LC2_D21, LC8_D21";
+	LC5_D25 : LORAX2 = "X, LC4_D25, LC3_D25, LC2_D25";
+	LC7_D25 : LORAX2 = "LC8_D25, LC6_D25, LC7_D25, LC5_D25";
+	LC8_D25 : LORAX2 = "X, LC8_D25, LC6_D25, LC5_D25";
+	LC6_D25 : LORAX2 = "X, X, LC6_D25, LC5_D25";
+	LC4_D25 : LORAX2 = "X, LC4_D25, LC3_D25, LC2_D25";
+	LC3_D25 : LORAX2 = "X, X, LC3_D25, LC2_D25";
+	LC1_D25 : LORAX2 = "X, LC1_D25, LC2_D21, LC8_D21";
+	LC2_D21 : LORAX2 = "X, X, LC2_D21, LC8_D21";
+	LC8_D21 : LORAX2 = "X, X, X, LC8_D21";
+END;

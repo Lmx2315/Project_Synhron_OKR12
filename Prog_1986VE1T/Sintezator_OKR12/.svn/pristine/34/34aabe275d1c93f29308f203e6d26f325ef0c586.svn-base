@@ -1,0 +1,175 @@
+
+#include "opora.h"
+#include "DDS1508pl1t.h"
+
+//#define dds_data PORTA->RXTX; //устанавливаем  данные
+
+unsigned int delay_us(unsigned int a) //функция задержки
+{
+	unsigned int t,l;
+	unsigned int k;
+
+	k=100*a;
+
+	for (t=0;t<k;t++) l=l+1;
+
+		return l;
+}
+
+void init_DDS (ShiftReg *pins)
+{
+
+	pins->RSTN->RXTX|=(1<<(pins->RSTN_DDS)); //устанавливаем еденицу на сигнал RSTN
+
+	pins->SCSN->RXTX|=(1<<(pins->SCSN_DDS)); //устанавливаем еденицу на сигнал SCSN - выбор параллельного порта
+
+	pins->wrn ->RXTX|=(1<<(pins->wrn_DDS)); //устанавливаем еденицу на сигнал wrn
+
+	pins->rdn->RXTX|=(1<<(pins->rdn_DDS)); //устанавливаем еденицу на сигнал rdn
+
+	pins->csn->RXTX|=(1<<(pins->csn_DDS)); //устанавливаем еденицу на сигнал csn
+
+
+
+}
+
+void Write_DDS(unsigned short data, unsigned short port_adr,ShiftReg *pins)
+{
+	//запись адреса
+
+	delay_us(1);
+
+	pins->rdn->RXTX|=(1<<(pins->rdn_DDS)); //устанавливаем еденицу на сигнал rdn
+
+	delay_us(1);
+
+	pins->port_data->OE=0xffff; //переводим порт на выход
+  
+    delay_us(1);
+    
+    pins->adr->RXTX&=~(1<<(pins->pin_adr)); //устанавливаем ноль на сигнал adr, Сигал ADR выбирает доступ к адресному регистру (ADR=0), либо к данным (ADR=1).
+    
+    delay_us(1);	
+	
+	pins->csn->RXTX&=~(1<<(pins->csn_DDS)); //устанавливаем ноль на сигнал csn
+    
+    delay_us(1);	
+	
+	pins->port_data->RXTX=port_adr; //устанавливаем значение адреса на шину данных
+	
+	delay_us(1);
+
+    pins->wrn->RXTX&=~(1<<(pins->wrn_DDS)); //устанавливаем ноль на сигнал wrn
+
+	delay_us(1);
+
+	pins->wrn->RXTX|=(1<<(pins->wrn_DDS)); //устанавливаем еденицу на сигнал wrn
+
+	delay_us(1);
+
+	pins->csn->RXTX|=(1<<(pins->csn_DDS)); //устанавливаем еденицу на сигнал csn
+
+	delay_us(1);
+
+	//запись данных по установленному ранее адресу
+    
+    pins->adr->RXTX|=(1<<(pins->pin_adr)); //устанавливаем еденицу на сигнал adr, Сигал ADR выбирает доступ к адресному регистру (ADR=0), либо к данным (ADR=1).
+	
+	delay_us(1);
+
+	pins->csn->RXTX&=~(1<<(pins->csn_DDS)); //устанавливаем ноль на сигнал csn
+
+	delay_us(1);
+    
+    pins->port_data->RXTX=data; //устанавливаем значение данных на шину данных
+   
+    delay_us(1);
+   
+    pins->wrn->RXTX&=~(1<<(pins->wrn_DDS)); //устанавливаем ноль на сигнал wrn
+  
+	delay_us(1);
+
+	pins->wrn->RXTX|=(1<<(pins->wrn_DDS)); //устанавливаем еденицу на сигнал wrn
+	
+	delay_us(1);
+	
+	pins->csn->RXTX|=(1<<(pins->csn_DDS)); //устанавливаем еденицу на сигнал csn
+
+	delay_us(1);
+
+	pins->port_data->RXTX=0xffff; //устанавливаем значение данных на шину данных
+
+}
+
+
+unsigned short Read_DDS(unsigned short port_adr,ShiftReg *pins)
+{
+
+	unsigned short a=0;
+	unsigned short b=0;
+
+	//запись адреса
+
+	pins->rdn->RXTX|=(1<<(pins->rdn_DDS)); //устанавливаем еденицу на сигнал rdn
+
+	delay_us(1);
+
+	pins->port_data->OE=0xffff; //переводим порт на выход
+
+	pins->adr->RXTX&=~(1<<(pins->pin_adr)); //устанавливаем ноль на сигнал adr, Сигал ADR выбирает доступ к адресному регистру (ADR=0), либо к данным (ADR=1).
+
+	delay_us(1);
+
+	pins->csn->RXTX&=~(1<<(pins->csn_DDS)); //устанавливаем ноль на сигнал csn
+	
+	delay_us(1);
+
+    pins->port_data->RXTX=port_adr; //устанавливаем значение адреса на шину данных
+    
+    delay_us(1);
+
+    pins->wrn->RXTX&=~(1<<(pins->wrn_DDS)); //устанавливаем ноль на сигнал wrn
+
+	delay_us(1);
+    
+  	pins->wrn->RXTX|=(1<<(pins->wrn_DDS)); //устанавливаем еденицу на сигнал wrn
+
+	delay_us(1);
+
+	pins->csn->RXTX|=(1<<(pins->csn_DDS)); //устанавливаем еденицу на сигнал csn
+
+	delay_us(1);
+
+	//чтение данных по установленному ранее адресу
+
+	pins->port_data->OE=0x0000; //переводим порт на вход
+    
+    delay_us(1);
+    
+    pins->adr->RXTX|=(1<<(pins->pin_adr)); //устанавливаем еденицу на сигнал adr, Сигал ADR выбирает доступ к адресному регистру (ADR=0), либо к данным (ADR=1).
+	
+	delay_us(1);
+
+	pins->csn->RXTX&=~(1<<(pins->csn_DDS)); //устанавливаем ноль на сигнал csn
+
+	delay_us(1);
+
+	pins->rdn->RXTX&=~(1<<(pins->rdn_DDS)); //устанавливаем ноль на сигнал rdn
+
+	delay_us(1);
+    
+	pins->rdn->RXTX|=(1<<(pins->rdn_DDS)); //устанавливаем еденицу на сигнал rdn
+	
+    delay_us(1);
+
+    b=pins->port_data->RXTX; //считываем значение данных с шины данных
+ 
+	delay_us(1);
+	
+	pins->csn->RXTX|=(1<<(pins->csn_DDS)); //устанавливаем еденицу на сигнал csn
+
+	delay_us(1);
+
+	return (a+b);
+
+}

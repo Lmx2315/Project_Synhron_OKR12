@@ -1,0 +1,27 @@
+Dependencies for Project '1986ve1bootuart', Target 'Target 1': (DO NOT MODIFY !)
+F (.\startup_bootuart.s)(0x4F224BA0)(--cpu Cortex-M1 -g --apcs=interwork -I C:\Keil2\ARM\RV31\INC -I C:\Keil2\ARM\CMSIS\Include --list "startup_bootuart.lst" --xref -o "startup_bootuart.o" --depend "startup_bootuart.d")
+F (.\bootuart.c)(0x52A95CA0)(-c --cpu Cortex-M1 -g -O0 --apcs=interwork -I C:\Keil2\ARM\RV31\INC -I C:\Keil2\ARM\CMSIS\Include -o "bootuart.o" --omf_browse "bootuart.crf" --depend "bootuart.d")
+I (inc\opora.h)(0x4EBA2D5B)
+I (inc\core_cm1.h)(0x4E520E64)
+I (C:\Keil2\ARM\ARMCC\bin\..\include\stdint.h)(0x4EB10AC4)
+I (inc\opora_can_defs.h)(0x4C7F86AC)
+I (inc\opora_usb_defs.h)(0x4C7F86AC)
+I (inc\opora_eeprom_defs.h)(0x4C7F86AC)
+I (inc\opora_rst_clk_defs.h)(0x4D47F8C3)
+I (inc\opora_dma_defs.h)(0x4C7F86AC)
+I (inc\opora_uart_defs.h)(0x4C7F86AC)
+I (inc\opora_spi_defs.h)(0x4C7F86AC)
+I (inc\opora_mil_std_1553_defs.h)(0x4C7F86AC)
+I (inc\opora_power_defs.h)(0x4C7F86AC)
+I (inc\opora_wwdg_defs.h)(0x4C7F86AC)
+I (inc\opora_iwdg_defs.h)(0x4C7F86AC)
+I (inc\opora_timer_defs.h)(0x4C7F86AC)
+I (inc\opora_adc_defs.h)(0x4C7F86AC)
+I (inc\opora_dac_defs.h)(0x4C7F86AC)
+I (inc\opora_port_defs.h)(0x4EA9381D)
+I (inc\opora_arinc429r_defs.h)(0x4C7F86AC)
+I (inc\opora_bkp_defs.h)(0x4C7F86AC)
+I (inc\opora_arinc429t_defs.h)(0x4C7F86AC)
+I (inc\opora_ext_bus_cntrl_defs.h)(0x4C7F86AC)
+I (inc\opora_ethernet_defs.h)(0x4EA937FE)
+I (inc\opora_sys_defs.h)(0x4C7F86AC)

@@ -1,0 +1,19 @@
+--cpu Cortex-M3
+".\objects\main.o"
+".\objects\spec_1508pl10.o"
+".\objects\startup_mdr32f9qx.o"
+".\objects\system_mdr32f9qx.o"
+".\objects\mdr32f9qx_adc.o"
+".\objects\mdr32f9qx_bkp.o"
+".\objects\mdr32f9qx_dac.o"
+".\objects\mdr32f9qx_i2c.o"
+".\objects\mdr32f9qx_iwdg.o"
+".\objects\mdr32f9qx_port.o"
+".\objects\mdr32f9qx_rst_clk.o"
+".\objects\mdr32f9qx_ssp.o"
+".\objects\mdr32f9qx_timer.o"
+".\objects\mdr32f9qx_uart.o"
+--nodebug --strict --scatter ".\Objects\pj2.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\pj2.map" -o .\Objects\pj2.axf

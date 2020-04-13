@@ -1,0 +1,133 @@
+ARM Linker, 5.02 [Build 28] [MDK-ARM Standard]
+
+==============================================================================
+
+Section Cross References
+
+    startup_bootuart.o(RESET) refers to startup_bootuart.o(STACK) for __initial_sp
+    startup_bootuart.o(RESET) refers to startup_bootuart.o(.text) for Reset_Handler
+    startup_bootuart.o(.text) refers to startup_bootuart.o(RESET) for __Vectors
+    startup_bootuart.o(.text) refers to bootuart.o(.text) for bootuart
+    bootuart.o(.text) refers to bootuart.o(.emb_text) for sleep
+    bootuart.o(.text) refers to bootuart.o(.data) for ks
+    bootuart.o(.text) refers to bootuart.o(.bss) for bufdata
+    bootuart.o(.text) refers to bootuart.o(.constdata) for id_str
+
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    bootuart.c                               0x00000000   Number         0  bootuart.o ABSOLUTE
+    bootuart.c                               0x00000000   Number         0  bootuart.o ABSOLUTE
+    startup_bootuart.s                       0x00000000   Number         0  startup_bootuart.o ABSOLUTE
+    RESET                                    0x20103400   Section        8  startup_bootuart.o(RESET)
+    .emb_text                                0x20103408   Section        6  bootuart.o(.emb_text)
+    .text                                    0x20103410   Section       20  startup_bootuart.o(.text)
+    .text                                    0x20103424   Section        0  bootuart.o(.text)
+    .constdata                               0x201037e8   Section       12  bootuart.o(.constdata)
+    .data                                    0x20103c00   Section        9  bootuart.o(.data)
+    .bss                                     0x20103c0c   Section      256  bootuart.o(.bss)
+    STACK                                    0x20103d10   Section      128  startup_bootuart.o(STACK)
+    __initial_sp                             0x20103d90   Data           0  startup_bootuart.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv3M$S$PE$A:L22$X:L11$S22$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$STANDARDLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __Vectors_Size                           0x00000008   Number         0  startup_bootuart.o ABSOLUTE
+    __Vectors                                0x20103400   Data           4  startup_bootuart.o(RESET)
+    __Vectors_End                            0x20103408   Data           0  startup_bootuart.o(RESET)
+    sleep                                    0x20103409   Thumb Code     6  bootuart.o(.emb_text)
+    Reset_Handler                            0x20103411   Thumb Code    12  startup_bootuart.o(.text)
+    OutByteTX                                0x20103425   Thumb Code    18  bootuart.o(.text)
+    GetByteRX                                0x20103437   Thumb Code    20  bootuart.o(.text)
+    GetIntRX                                 0x2010344b   Thumb Code    40  bootuart.o(.text)
+    OutIntTX                                 0x20103473   Thumb Code    24  bootuart.o(.text)
+    Getbufdata                               0x2010348b   Thumb Code   126  bootuart.o(.text)
+    Verify                                   0x20103509   Thumb Code    48  bootuart.o(.text)
+    Program                                  0x20103539   Thumb Code   266  bootuart.o(.text)
+    Erase                                    0x20103643   Thumb Code   224  bootuart.o(.text)
+    bootuart                                 0x20103723   Thumb Code   152  bootuart.o(.text)
+    id_str                                   0x201037e8   Data          12  bootuart.o(.constdata)
+    adr                                      0x20103c00   Data           4  bootuart.o(.data)
+    ibuf                                     0x20103c04   Data           4  bootuart.o(.data)
+    ks                                       0x20103c08   Data           1  bootuart.o(.data)
+    bufdata                                  0x20103c0c   Data         256  bootuart.o(.bss)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image entry point : Not specified.
+
+  Load Region LR_IROM1 (Base: 0x20103400, Size: 0x00000400, Max: 0x00000800, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Base: 0x20103400, Size: 0x000003f4, Max: 0x00000800, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20103400   0x00000008   Data   RO            2    RESET               startup_bootuart.o
+    0x20103408   0x00000006   Code   RO            9    .emb_text           bootuart.o
+    0x2010340e   0x00000002   PAD
+    0x20103410   0x00000014   Code   RO            3    .text               startup_bootuart.o
+    0x20103424   0x000003c4   Code   RO           10    .text               bootuart.o
+    0x201037e8   0x0000000c   Data   RO           12    .constdata          bootuart.o
+
+
+    Execution Region RW_IRAM1 (Base: 0x20103c00, Size: 0x00000190, Max: 0x00000400, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20103c00   0x00000009   Data   RW           13    .data               bootuart.o
+    0x20103c09   0x00000003   PAD
+    0x20103c0c   0x00000100   Zero   RW           11    .bss                bootuart.o
+    0x20103d0c   0x00000004   PAD
+    0x20103d10   0x00000080   Zero   RW            1    STACK               startup_bootuart.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       970         46         12          9        256       4522   bootuart.o
+        20          8          8          0        128        336   startup_bootuart.o
+
+    ----------------------------------------------------------------------
+       992         54         20         12        388       4858   Object Totals
+         0          0          0          0          0          0   (incl. Generated)
+         2          0          0          3          4          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+         0          0          0          0          0          0   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+       992         54         20         12        388       4806   Grand Totals
+       992         54         20         12        388       4806   ELF Image Totals
+       992         54         20         12          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 1012 (   0.99kB)
+    Total RW  Size (RW Data + ZI Data)               400 (   0.39kB)
+    Total ROM Size (Code + RO Data + RW Data)       1024 (   1.00kB)
+
+==============================================================================
+

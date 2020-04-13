@@ -1,0 +1,117 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.13.0.0
+Copyright (C) 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Dmitry Shvedov, NASA, LIC=HN0UH-WCTM4-HJL6M-X43B5-K5DI2-B0TL3
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Standard  Version: 5.13.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 1 (build 106)
+Assembler:       Armasm.exe V5.05 update 1 (build 106)
+Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
+Library Manager: ArmAr.exe V5.05 update 1 (build 106)
+Hex Converter:   FromElf.exe V5.05 update 1 (build 106)
+CPU DLL:         SARMCM3.DLL V5.13.0.0
+Dialog DLL:      DARMCM1.DLL V1.12.0.0
+Target DLL:      UL2CM3.DLL V1.154.12.0
+Dialog DLL:      TARMCM1.DLL V1.9.0.0
+ 
+<h2>Project:</h2>
+C:\SOFT_project\Mk\Project_Synhron_OKR12\Prog_1986VE1T\Sintezator_OKR12\Ethernet\UDP\UDPCANUART.uvprojx
+Project File Date:  06/10/2015
+
+<h2>Output:</h2>
+Rebuild target 'Управляющая программа'
+compiling Application.c...
+assembling Startup.s...
+compiling CAN1.c...
+compiling PORTA.c...
+compiling PORTB.c...
+compiling ETHERNET.c...
+src\1986VE1T\ETHERNET\ETHERNET.c(515): warning:  #767-D: conversion from pointer to smaller integer
+        if((uint16_t)dst>0x1FFC)        dst=(uint32_t*)0x38001000;
+src\1986VE1T\ETHERNET\ETHERNET.c(533): warning:  #767-D: conversion from pointer to smaller integer
+        if((uint16_t)dst>0x1FFC)        dst=(uint32_t*)0x38001000;
+src\1986VE1T\ETHERNET\ETHERNET.c(536): warning:  #767-D: conversion from pointer to smaller integer
+        if((uint16_t)dst>0x1FFC)        dst=(uint32_t*)0x38001000;
+src\1986VE1T\ETHERNET\ETHERNET.c(538): warning:  #767-D: conversion from pointer to smaller integer
+        ETHERNET->X_Tail=(uint16_t)dst;
+src\1986VE1T\ETHERNET\ETHERNET.c(601): warning:  #767-D: conversion from pointer to smaller integer
+        if((uint16_t)src>0xFFF) src=(uint32_t*)0x38000000;
+src\1986VE1T\ETHERNET\ETHERNET.c(603): warning:  #767-D: conversion from pointer to smaller integer
+        ETHERNET->R_Head=(uint16_t)src;
+src\1986VE1T\ETHERNET\ETHERNET.c(544): warning:  #550-D: variable "space_start" was set but never used
+        uint16_t space_start=0,space_end=0,tail,head;
+src\1986VE1T\ETHERNET\ETHERNET.c(635): warning:  #767-D: conversion from pointer to smaller integer
+        if((uint16_t)src>0xFFF) src=(uint32_t*)0x38000000;
+src\1986VE1T\ETHERNET\ETHERNET.c(652): warning:  #767-D: conversion from pointer to smaller integer
+        if((uint16_t)src>0xFFF) src=(uint32_t*)0x38000000;
+src\1986VE1T\ETHERNET\ETHERNET.c(654): warning:  #767-D: conversion from pointer to smaller integer
+        ETHERNET->R_Head=(uint16_t)src;
+src\1986VE1T\ETHERNET\ETHERNET.c(611): warning:  #550-D: variable "space_start" was set but never used
+        uint16_t space_start=0,space_end=0,tail,head;
+src\1986VE1T\ETHERNET\ETHERNET.c: 11 warnings, 0 errors
+compiling PORTC.c...
+compiling PORTD.c...
+compiling PORTE.c...
+compiling PORTF.c...
+compiling RST_CLK.c...
+compiling UART1.c...
+compiling UART2.c...
+compiling TERMINAL.c...
+src\1986VE1T\TERMINAL\TERMINAL.c(23): warning:  #223-D: function "sendT" declared implicitly
+   for (i=0;i<20;i++) sendT("\r\n");    // очистка терминала
+src\1986VE1T\TERMINAL\TERMINAL.c: 1 warning, 0 errors
+compiling DDS1508pl1t.c...
+src\1986VE1T\DDS1508pl1t\DDS1508pl1t.c(423): warning:  #223-D: function "Transf" declared implicitly
+                Transf ("---------------\r\n" );
+src\1986VE1T\DDS1508pl1t\DDS1508pl1t.c(439): warning:  #223-D: function "Transf" declared implicitly
+  Transf ("//------------------------------\r\n" );
+src\1986VE1T\DDS1508pl1t\DDS1508pl1t.c(837): warning:  #223-D: function "Transf" declared implicitly
+    Transf ("work..\r\n" );
+src\1986VE1T\DDS1508pl1t\DDS1508pl1t.c(845): warning:  #223-D: function "sprintf" declared implicitly
+    sprintf(strng,"%d",f);
+src\1986VE1T\DDS1508pl1t\DDS1508pl1t.c(901): warning:  #223-D: function "Transf" declared implicitly
+  Transf ("расчёт произведён:\r\n" );
+src\1986VE1T\DDS1508pl1t\DDS1508pl1t.c(903): warning:  #223-D: function "sprintf" declared implicitly
+           sprintf(strng,"%f",ratio);
+src\1986VE1T\DDS1508pl1t\DDS1508pl1t.c(946): warning:  #223-D: function "Transf" declared implicitly
+    Transf ("work..\r\n" );
+src\1986VE1T\DDS1508pl1t\DDS1508pl1t.c(957): warning:  #223-D: function "sprintf" declared implicitly
+    sprintf(strng,"%f",dF1);
+src\1986VE1T\DDS1508pl1t\DDS1508pl1t.c(1135): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
+        else if ((dds->znak_LCHM)==-1) {step1 =    dF_step;}   //условие - если ЛЧМ отрицательная //шаг уменьшения частоты
+src\1986VE1T\DDS1508pl1t\DDS1508pl1t.c(937): warning:  #550-D: variable "fend" was set but never used
+    unsigned long long fstart,fend,time_l;
+src\1986VE1T\DDS1508pl1t\DDS1508pl1t.c(938): warning:  #177-D: variable "step2" was declared but never referenced
+    long long  step1,step2;
+src\1986VE1T\DDS1508pl1t\DDS1508pl1t.c: 11 warnings, 0 errors
+compiling ADC.c...
+src\1986VE1T\ADC\ADC.c(31): warning:  #61-D: integer operation result is out of range
+                                        |(0xf<<28);  //Задержка между началом преобразования ADC1 при последовательном переборе, либо работе на один канал.
+src\1986VE1T\ADC\ADC.c(36): warning:  #61-D: integer operation result is out of range
+                                          |(1<<31); //выбор температурного датчика
+src\1986VE1T\ADC\ADC.c: 2 warnings, 0 errors
+compiling ARP.c...
+compiling ICMP.c...
+compiling IP.c...
+compiling UDP.c...
+compiling MAC.c...
+compiling MemAPI.c...
+linking...
+Program Size: Code=37648 RO-data=1376 RW-data=1096 ZI-data=14096  
+FromELF: creating hex file...
+".\obj\proshivka.axf" - 0 Error(s), 25 Warning(s).
+
+<h2>Collection of Component include folders:</h2>
+  C:\SOFT_project\Mk\Project_Synhron_OKR12\Prog_1986VE1T\Sintezator_OKR12\Ethernet\UDP\RTE
+  C:\Keil_v5\ARM\PACK\Keil\MDR1986BExx\1.4\Libraries\CMSIS\CM1\DeviceSupport\MDR1986VE1T\inc
+
+<h2>Collection of Component Files used:</h2>
+</pre>
+</body>
+</html>

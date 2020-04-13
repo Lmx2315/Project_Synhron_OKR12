@@ -1,0 +1,61 @@
+NDB006
+The number of symbol table entries is: 1
+The length of the symbol table is: 13
+
+Index Hierarchy Path
+----- --------------
+!	&null_hpath&
+
+The number of name info structs is : 49
+
+InsOrder BitField SymTableIndex NextSyn SynParent Loc ChainType NextChain ChainParent FanOut DirExp ParExp ShareExp NodeName
+-------- -------- ------------- ------- --------- --- --------- --------- ----------- ------ ------ ------ -------- --------
+"	IeEA	!	51	0	:18	~
+#	IeEA	!	51	0	:19	"!
+$	IeEA	!	51	0	:20	""
+%	IeEA	!	51	0	:21	"#
+&	IeEA	!	51	0	:22	"$
+'	IeEA	!	51	0	:23	"%
+(	IeEA	!	51	0	:24	"&
+)	IeEA	!	51	0	:25	"'
+*	LGPw	!	A	49	0	1	R	:26	"(
++	LGPw	!	@	49	0	1	Q	:27	")
+,	LGPw	!	?	49	0	1	P	:28	"*
+-	LGPw	!	>	49	0	1	O	:29	"+
+.	LGPw	!	=	49	0	1	N	:30	",
+/	LGPw	!	<	49	0	1	M	:31	"-
+0	LGPw	!	;	49	0	1	L	:32	".
+1	LGPw	!	:	49	0	1	K	:33	"/
+2	IeEA	!	53	0	:34	"0
+3	IeEA	!	53	0	:35	"1
+4	IeEA	!	53	0	:36	"2
+5	IeEA	!	53	0	:37	"3
+6	IeEA	!	53	0	:38	"4
+7	IeEA	!	53	0	:39	"5
+8	IeEA	!	53	0	:40	"6
+9	IeEA	!	53	0	:41	"7
+:	INvO	!	1	a0	"/
+;	INvO	!	0	a1	".
+<	INvO	!	/	a2	"-
+=	INvO	!	.	a3	",
+>	INvO	!	-	a4	"+
+?	INvO	!	,	a5	"*
+@	INvO	!	+	a6	")
+A	INvO	!	*	a7	"(
+B	(@\6H	!	31	0	8	*	+	,	-	.	/	0	1	clk	m
+C	L8ef	!	33	0	1	1	i0	n
+D	L8ef	!	35	0	1	0	i1	o
+E	L8ef	!	37	0	1	/	i2	p
+F	L8ef	!	39	0	1	.	i3	q
+G	L8ef	!	41	0	1	-	i4	r
+H	L8ef	!	43	0	1	,	i5	s
+I	L8ef	!	45	0	1	+	i6	t
+J	L8ef	!	47	0	1	*	i7	u
+K	"<R?c	!	28	0	out0	!	out0	}
+L	"<R?c	!	28	0	out1	!	out1	|
+M	"<R?c	!	28	0	out2	!	out2	{
+N	"<R?c	!	28	0	out3	!	out3	z
+O	"<R?c	!	28	0	out4	!	out4	y
+P	"<R?c	!	28	0	out5	!	out5	x
+Q	"<R?c	!	28	0	out6	!	out6	w
+R	"<R?c	!	28	0	out7	!	out7	v
